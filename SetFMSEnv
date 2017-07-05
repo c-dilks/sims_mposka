@@ -1,0 +1,29 @@
+#!/bin/tcsh -f
+setenv SETFMSENV "SETFMSENV"
+unsetenv FMSROOT
+setenv FMSROOT "${SIMHOME}/analysis/root12fms"
+setenv FMSSRC "${FMSROOT}/FpdRoot"
+setenv FMSTXT  "${FMSROOT}/fmstxt"
+#setenv FMSGAIN "fpdgain.txt"
+setenv FMSGAIN "FmsPtGainR16.txt"
+setenv RunDepPath "$FMSTXT/RunDep15.root"
+
+#setenv QTMAP "qtmap2009V1.txt"
+
+#Uncomment next line to use 2012 remapping 
+setenv QTMAP "qtmap2012V1.txt"
+
+setenv QTMAP2PP "qtmap2pp.txt"
+setenv FMSCORR "FmsCorrD70.txt"
+#setenv FMSCORR "FmsCorrD73.txt"
+setenv DataRoot "/GreyDisk1/Run15/"
+setenv GetFakeSpinInfo "false"
+setenv Keepfiles "true"
+#comment out next line if you want to keep the filesxxxxx directory
+#unsetenv Keepfiles
+
+
+
+
+
+

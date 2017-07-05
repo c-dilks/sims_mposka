@@ -1,0 +1,15 @@
+#
+# Macro file for Chris (different energy depositions curves vs initial energy)
+#
+# set verbose level for this run
+#
+/run/verbose	2
+/event/verbose	0
+/tracking/verbose	1
+#
+# Set the initial kinematic and run 10 events
+# gamma ray energy {keV} in direction (1.,0.,0.)
+#
+/gun/particle 
+/gun/energy {eKin} keV
+/run/beamOn	10

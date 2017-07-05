@@ -1,0 +1,9 @@
+/gps/source/multiplevertex true
+/gps/source/clear
+/gps/source/add 1
+/gps/particle pi0
+/gps/energy 10.789971 GeV
+/gps/direction -0.521110 0.196495 10.774743
+/gps/position 0.000000 0.000000 -7000.000000 mm
+/run/beamOn 1
+exit

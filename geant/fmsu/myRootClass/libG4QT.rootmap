@@ -1,0 +1,2 @@
+Library.G4QT:                               libG4QT.so libTree
+Library.vector<G4QT>:                       libG4QT.so libTree

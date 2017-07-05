@@ -1,0 +1,137 @@
+
+
+____PYTHIA____
+
+*GenerateEvents.C( nevents, sqrts, iter )
+  nevents is number of pythia events to generate, sqrts is COM energy, iter is avariable I added to make very large data sets and put them into seperate root files, not currently used
+  Calls LoadLibs.C, which loads in the library Simgen.so
+  Creates an instance of the EventLoop class, and calls the Start method
+  Creates an instance of Analysis class, which fills various histograms in the event.root file
+
+
+  *EventLoop.cxx
+    Creates an instance of TPythia6 and initilizes variables (pp collion at desired energy; makes pi0 stable)
+    Creates events tree to hold informtion automaticaly created by TPythia (contains all particles in event unless line in Start() method is uncommented, see below)
+
+    EventLoop::Start()
+      Sets up branches for a tree called simulations, which stores info on particles that will pass to geant
+      Inside a for loop, creates the acutal pythia event with GenerateEvent
+      Loops through particles in event, and makes a cut on wheter to keep the event if any particle meets criteria (note KF is particle code, 111=pi0)
+      If the event passes, loops through particles again, and writes the appropriate commands into the macrofile for each particle that meets cuts
+
+
+End Result is two files in outgen directory (events.root and pythiaout.root) which contain the events and simulations trees for backup, and macrofiles created in the macro directory for Geant
+
+NOTE: There exists two other classes in src called Particle and HashKF, but they aren't used for anything currently
+
+
+
+
+____GEANT____
+
+Basic Flowchart
+	1.Geant is initialized, detector condstructed, physics list set, and event action began
+	2.As new particles are created (including primary particles) thier track is sent to StackingAction::ClassifyNewTrack(), which determines the priority of the particle
+	3.Track is then sent to TrackingAction::PreUserTrackingAction(), where based of it's user information (TrackInformation.cc), it determines whether to enable tracking of the particle
+	4.Highest Priority particle (or Last particle added if multiple have same) has the distance to next interaction point for all processes listed in PhysicsList.cc that are applicable, and smallest one is taken (or distance to boundry of volume if that is smaller)
+  	5.If step is taken through sensative detector, ProcessHits is called, storing various information about the event and adding the information to the HitsCollection
+	6.Information on new particle position is updated in track, if it has not stopped or been destroyked, go back to step4. If it has been destroyed, run TrackingAction::PostUserTrackingInformation
+	7.PostUserTrackingInformation collects all secondaries from the particle, and passes on the user information, as well as setting tracking status.
+	8.This continues until all the fUrgent processes are done, followed by the fWaiting stack, until all particles are killed
+	9. EventAction::EndOfEvent() is called, storing data, setting variables and filling Tmatrices in PostSim class, which are then digitized and turned into Qt information
+	10. This repeats for all events in file
+
+  
+*shoot-multiple
+  Creates a condor job for every macrofile in /macros/, execuiting the geant main() function in simutesting
+
+
+*simutesting.cc
+  Initializes members of DetectorConstruction, PhysicsLists, and EventAction
+
+
+  **PhysicsLists.cc
+    Sets which particles and processes will be used in the simulation. Haven't adjusted anythign in here yet
+
+  **DetectorConstrution
+    Builds the detector, including options for cookie length and energy dependent index of refraciton and absorbtion lenghts
+    Calls CellParamerterization.cc, which in turn calls CellGeo.cc, setting copy numbers for cells and creating a maping to nstb, row, col (not sure on detials here)
+    Creates a sensative detector corresponding to the large and small cells (FMSlarge and FMSsmall)
+    Again, haven't done much modification into the geometry, though the Hits portion is important for further analysis.
+
+    ***FMSlarge.cc (or FMSsmall.cc)
+      Sensative detector registared in DectorConstruction
+      Creates an instance of hit collection (FMSlargeHitsCollection.cc) 
+
+      FMSlarge::ProcessHits(G4Step*)
+        Called after particle has stepped through the sensative detector
+        Sets various local variables on whether the particles movement should consitute a hit and if it's an optical photon, based on both particle position and type	
+	Using copy numbers of cells, translates the volume to a NSTB, row, and column (Note I'm not very familiar on this mapping)
+        Creates a new Hit Object (FMSlargeHit.cc) and fills it with various track information based on the local variables
+	NOTE: this is where you should add additonal variables you want to store(ex. originalParticle ID)
+
+
+  **EventAction.cc
+    Dictates what should be done at the start and end of each event
+    It is here and in PostSim.cc that that QT matrices are created
+    Creates an instance of PostSim.cc and Trajectory.cc
+    Sets up branches for my tree
+
+    EventAction::EndOfEventAction(G4Event*)
+      For every particle in which tracking has been enabled (see TrackingAction.cc), store relevent variables such as Energy, position, etc and store them for the tree
+      Creates a dummy loop that right now represents the particle ID in geant
+      Within this loop, loops through both the large and small hit collections
+      If the hit came from the original particle represented by dummy loop, than relevent variables are passed to PostSim Class and used to update matrices in PostSim using the PostSim::FillMatrices() method
+      Envokes the PostSim::Digitize() method to create QT information, storing it inside my G4QT class in the tree
+
+    ***PostSim.cc
+      Creates a size 4 (one for each nstb) array of TMatrices for various quantities, most importantly adc_mat and fadc_mat, which are adc matrices based on optical photons and energy deposition respectively.
+      Sets up p_files to get gaincorr, geometry, etc.
+      PostSim::FillMatricies() takes variables set by EventAction and fills the TMatricies with them
+      Currently, an old method called GetHT must be run to set the nstb with thehighest energy deposition, though I believe we are encoding QT for all nstb
+      Encoding is done by the PostSim::Digitize method, which uses QT::encodeQT to create QT data
+
+
+  **StackingAction.cc
+    When a new Track is created, this class determines what stack it should be put into, i.e. what order it should process tracks in
+    Default behavior is Last In First Out, but I've adjusted it to finish simulating primary particles before moving on to seconaries by using the fUrgent stack
+    Additionally, this class kills a certain percentage of optical photons at creation time, to reflect photocathode tube effiencies (note energy lost if track is killed this way)
+    Contains initilization of coordtr, which could store some information on stored particles (i've replaced this by only tracking particles we want and storing all thier information). Not currently used
+
+  **TrackingAction.cc
+    PreUserTrackingAction is called at the time of track creation, while PostUserTrackingAction is called before Track is deleted
+    PreUserTrackingAction checks user info to see if we want a track stored, and if so turns on tracking and stores trajectory
+    PostUserTrackingAction gets all the secondaries created by the particle, and passes on the user track information (ex originalPrimary)
+    I've also added cuts in PostUserTrackingAction to determine whether we want to track the secondaries of a particular particle
+    What information is stored in user track information is determined by members of the TrackInformation.cc class
+
+  NOTE:: There is also the SteppingAction class, which chris used to fill a tree with information on optical photon reflections, not currently used
+
+
+____ANALYSIS____
+
+
+I'm assuming you know more about the process of making OFiles and such than I do, so I'm just going to list some changes I've made to get it working with the simulation
+
+1)Within the myprograms direcotory, I've made a modified version of Mkfiles, which sets some variables at the start normally in the MkRun and creates a fake run*.root file by using hadd on all gFiles
+
+2)Again withing myprograms, I've changed lines in CallADCLED_QT9.C, CallADC_QT9.C, and CallSelect_scriptQT1.C so that the correct tree is read in the AnalTools methods.
+
+3)inside the analysis/root12fms/FpdRoot I've modified the Analtools.cxx and dataSet.* files.
+	Analtools.cxx At line 3871, added a line to fill the p_out tree. Don't remember why it was necessary to do this here as opposed to where it is usually filled
+
+	dataSet.h Added include statements to handle std::vector class, as well as instances to handle my class at line 228 
+	NOTE, the initilization of some pointers to 0 can be moved to the constructor as I have done, since the complier gives a warning that older c++ versions can't handle this
+
+	dataSet.cxx 
+	  At line 59, set CurrentRunNubmer to same as in h11_09 case, douht this is necessary since I change it later
+	  AT line 97, added if statement for our tree name
+  	  Commented out some GetEntry calls around line 150, since they are/could be out of range and cause erros to be thrown
+	  At line 159, made the first and lastrun numbers ficticious day 400 runs
+	  At line 431, Since my tree does not have specific branches for QT and nqtdata, I've added a fix to assign the correct values to the contianers already in dataSet. 
+	  At line 481, added exception to RunsArray check in the case of simulated trees. Not sure why this had to be done, but I vaugely remember it throwing exceptions until I made this call for hsimu
+	  At line 500, ignored check to kicked function of Rfill on bunch bits. Again, not sure exact purpose but was causing running errors
+	  Lines 550 and 699, Ignored setting branch addresses for variables not in the new trees, and replaced them with equivlent ones where appropriate
+
+
+

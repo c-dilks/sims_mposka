@@ -1,0 +1,6 @@
+geant/fmsu/outroot/*
+geant/fmsu/outroot*/*
+geant/fmsu/log/*
+geant/fmsu/logfiles/*
+geant/fmsu/gFiles/*
+analysis/*

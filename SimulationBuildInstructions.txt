@@ -1,0 +1,48 @@
+1. Create a directory to hold all your builds (somewhat equivlant to the Program Files folder on window). I suggest calling it builds and putting it in your home directory
+	mkdir ~/builds
+
+2.Inside your builds diretory create another directory called "arc". Like noah's arc this will store all the original copies of the programs you build in case something goes wrong.
+	cd ~/builds
+	mkdir arc
+
+3.Now you need to create and install the programs you want. I've made a backup of my builds directory in Shared, so those programs are a good place to start. To copy over the tarball, from your builds directory make the following commands
+	cp /Shared/bsumma/simulations/builds/arc/* arc/
+	cp /Shared/bsumma/simulations/builds/README ./
+
+4.The first command above gets all the tarballs, while the second is a README file created by chris. I recommend following those instructions (obviously changing things like "dilks" to your stuff. It may be that your version of root will run things just fine, but it'll be good practice building your own, and help for consitancy. So I'm recommending you build pythia, root (v5.34.19), geant, boost, and clhep. (I'm not sure if the latter two are necessary but better safe than sorry).
+	NOTE: you must do pythia first, as some of the others must know about pythia at the time of install
+
+5.Now lets copy over my simulation work. Note that I made this a little while ago, so the most recent changes aren't included, but the issues I want you to work on are all in these programs. To start with let's get the files. I've only written the makefiles in such a way that it assumes they're all in a folder ~/simulations.
+	mkdir ~/simulations
+	cd ~/simulations
+	cp /Shared/bsumma/simulations/* ./
+	cp -r /Shared/bsumma/simulations/geant ./
+	cp -r /Shared/bsumma/simulations/analysis/ ./
+        ln -s ~/builds builds	
+
+  The last line creates a symbolic link because the code assumes the builds directory is inside the simulations. This in a way tricks the program into thinking it's here (haven't tested this, may neeed to fix some things).
+	
+
+7.There's one line I have to work on getting to figure out everything correctly. go to ~/simulations/geant/fmsu/include. Open up EventAction.hh. At line 20, change that to a full path to where G4QT is located for you. So for example /home/branden/simulations/geant/fmsu/myRootClass/G4QT.h
+  Same thing for the dataset class in analysis/root12fms/FpdRoot directory (don't remember if it's in include or src
+ 
+
+7.Now we need to get all the enviromental variables set up. If everythings worksI believe it should, then this can be done with one command.
+	if you are using bash (default for most computers)
+		source envFinal.sh
+	if you are using tcsh
+		source envFinal.tcsh
+	NOTE: you will need to source this file every time, unless you want to set it up to source things by default (which will change things like your default root)
+
+8.Now we should be able to compile all the programs. star by going into the geant and making that program and let me know how it works
+	cd ~/simulations/geant/fmsu/myRootClass
+	make clean
+	make
+
+	cd ~/simulations/geant/fmsu
+	make
+
+	cd ~/simulations/geant/fmsu/simgen/src
+	touch EventLoop.h
+	make
+

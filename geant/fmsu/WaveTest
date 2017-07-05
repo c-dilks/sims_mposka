@@ -1,0 +1,1699 @@
+using defaults
+outroot/macro_pi0_10GeV_-0.08_0.08_1.mac built
+argc=3
+outroot/gFile_pi0_10GeV_-0.08_0.08_1
+THE EVENT NUMBER IS 1
+
+*************************************************************
+ Geant4 version Name: geant4-09-05-patch-01    (20-March-2012)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Creating FakeLumi.txt from entries in /home/mposka/simulations/analysis/root12fms/fmstxt/fill.txt 
+hello
+USING USER TXT
+CALLING cellgeo->SetGains() to read correction and gain file
+G4Cerenkov::G4Cerenkov constructor
+NOTE: this is now a G4VProcess!
+Required change in UserPhysicsList: 
+change: pmanager->AddContinuousProcess(theCerenkovProcess);
+to:     pmanager->AddProcess(theCerenkovProcess);
+        pmanager->SetProcessOrdering(theCerenkovProcess,idxPostStep);
+2.034e-06	0
+2.068e-06	1.32482e-08
+2.103e-06	2.68266e-08
+2.139e-06	4.07409e-08
+2.177e-06	5.53645e-08
+2.216e-06	7.0308e-08
+2.256e-06	8.55779e-08
+2.298e-06	1.01552e-07
+2.341e-06	1.17846e-07
+2.386e-06	1.34825e-07
+2.433e-06	1.52482e-07
+2.481e-06	1.70449e-07
+2.532e-06	1.89481e-07
+2.585e-06	2.09198e-07
+2.64e-06	2.29598e-07
+2.697e-06	2.50674e-07
+2.757e-06	2.72793e-07
+2.82e-06	2.95948e-07
+2.885e-06	3.19751e-07
+2.954e-06	3.44942e-07
+3.026e-06	3.7115e-07
+3.102e-06	3.98714e-07
+3.181e-06	4.27279e-07
+3.265e-06	4.5758e-07
+3.353e-06	4.89266e-07
+3.446e-06	5.22693e-07
+3.545e-06	5.58191e-07
+3.649e-06	5.95392e-07
+3.76e-06	6.35003e-07
+3.877e-06	6.7668e-07
+4.002e-06	7.21127e-07
+4.136e-06	7.68661e-07
+2.034e-06	0
+2.068e-06	1.32482e-08
+2.103e-06	2.68266e-08
+2.139e-06	4.07409e-08
+2.177e-06	5.53645e-08
+2.216e-06	7.0308e-08
+2.256e-06	8.55779e-08
+2.298e-06	1.01552e-07
+2.341e-06	1.17846e-07
+2.386e-06	1.34825e-07
+2.433e-06	1.52482e-07
+2.481e-06	1.70449e-07
+2.532e-06	1.89481e-07
+2.585e-06	2.09198e-07
+2.64e-06	2.29598e-07
+2.697e-06	2.50674e-07
+2.757e-06	2.72793e-07
+2.82e-06	2.95948e-07
+2.885e-06	3.19751e-07
+2.954e-06	3.44942e-07
+3.026e-06	3.7115e-07
+3.102e-06	3.98714e-07
+3.181e-06	4.27279e-07
+3.265e-06	4.5758e-07
+3.353e-06	4.89266e-07
+3.446e-06	5.22693e-07
+3.545e-06	5.58191e-07
+3.649e-06	5.95392e-07
+3.76e-06	6.35003e-07
+3.877e-06	6.7668e-07
+4.002e-06	7.21127e-07
+4.136e-06	7.68661e-07
+2.034e-06	0
+2.068e-06	1.29794e-08
+2.103e-06	2.6324e-08
+2.139e-06	4.0033e-08
+2.177e-06	5.44857e-08
+2.216e-06	6.93005e-08
+2.256e-06	8.44764e-08
+2.298e-06	1.00392e-07
+2.341e-06	1.16666e-07
+2.386e-06	1.33676e-07
+2.433e-06	1.51409e-07
+2.481e-06	1.69486e-07
+2.532e-06	1.88658e-07
+2.585e-06	2.08545e-07
+2.64e-06	2.29145e-07
+2.697e-06	2.50441e-07
+2.757e-06	2.72804e-07
+2.82e-06	2.96227e-07
+2.885e-06	3.20321e-07
+2.954e-06	3.4582e-07
+3.026e-06	3.72346e-07
+3.102e-06	4.00245e-07
+3.181e-06	4.29122e-07
+3.265e-06	4.5968e-07
+3.353e-06	4.91538e-07
+3.446e-06	5.25025e-07
+3.545e-06	5.60438e-07
+3.649e-06	5.97374e-07
+3.76e-06	6.36493e-07
+3.877e-06	6.77362e-07
+4.002e-06	7.2059e-07
+4.136e-06	7.66444e-07
+2.034e-06	0
+2.068e-06	1.51111e-08
+2.103e-06	3.06667e-08
+2.139e-06	4.66667e-08
+2.177e-06	6.35556e-08
+2.216e-06	8.08889e-08
+2.256e-06	9.86667e-08
+2.298e-06	1.17333e-07
+2.341e-06	1.36444e-07
+2.386e-06	1.56444e-07
+2.433e-06	1.77333e-07
+2.481e-06	1.98667e-07
+2.532e-06	2.21333e-07
+2.585e-06	2.44889e-07
+2.64e-06	2.69333e-07
+2.697e-06	2.94667e-07
+2.757e-06	3.21333e-07
+2.82e-06	3.49333e-07
+2.885e-06	3.78222e-07
+2.954e-06	4.08889e-07
+3.026e-06	4.40889e-07
+3.102e-06	4.74667e-07
+3.181e-06	5.09778e-07
+3.265e-06	5.47111e-07
+3.353e-06	5.86222e-07
+3.446e-06	6.27556e-07
+3.545e-06	6.71556e-07
+3.649e-06	7.17778e-07
+3.76e-06	7.67111e-07
+3.877e-06	8.19111e-07
+4.002e-06	8.74667e-07
+4.136e-06	9.34222e-07
+ AddDiscreteProcess to OpticalPhoton 
+Visualization Manager instantiating with verbosity "warnings (3)"...
+VISUALIZATION MANGAGER INITIALIZING
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRep (HepRepXML)
+  G4HepRepFile (HepRepFile)
+  RayTracer (RayTracer)
+  VRML1FILE (VRML1FILE)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, cyan, gray, green, grey, magenta, red, white, yellow
+
+command=/control/execute  fileName=outroot/macro_pi0_10GeV_-0.08_0.08_1.mac
+/run/verbose 2
+/vis/disable
+#/vis/open HepRepFile
+/vis/drawVolume
+/vis/scene/create
+/vis/scene/add/volume world
+/vis/sceneHandler/attach
+ERROR: Current scene handler not defined.  Please select or create one.
+/vis/viewer/set/viewpointThetaPhi 90 180 deg
+ERROR: G4VisCommandsViewerSet::SetNewValue: no current viewer.
+/vis/viewer/zoom 1.4
+ERROR: G4VisCommandsViewerZoom::SetNewValue: no current viewer.
+/vis/scene/add/trajectories smooth
+/tracking/storeTrajectory 2
+Attributes available for modeling and filtering with
+  "/vis/modeling/trajectories/create/drawByAttribute" and
+  "/vis/filtering/trajectories/create/attributeFilter" commands:
+G4SmoothTrajectory:
+  Charge (Ch): unit: e+ (G4double)
+  Track ID (ID): G4int
+  Initial kinetic energy (IKE): G4BestUnit (G4double)
+  Initial momentum magnitude (IMag): G4BestUnit (G4double)
+  Initial momentum (IMom): G4BestUnit (G4ThreeVector)
+  No. of points (NTP): G4int
+  PDG Encoding (PDG): G4int
+  Parent ID (PID): G4int
+  Particle Name (PN): G4String
+G4SmoothTrajectoryPoint:
+  Auxiliary Point Position (Aux): G4BestUnit (G4ThreeVector)
+  Step Position (Pos): G4BestUnit (G4ThreeVector)
+WARNING: Trajectory storing has been requested.  This action may be
+  reversed with "/tracking/storeTrajectory 0".
+# (if too many tracks cause core dump => /tracking/storeTrajectory 0)
+#/vis/scene/add/hits
+#/vis/scene/endOfEventAction accumulate
+/gps/position 0 0 -700. cm
+/gps/particle pi0
+/gps/direction -0.08 0.08 1
+/gps/energy 10 GeV
+/run/beamOn 1
+
+phot:   for  gamma    SubType= 12
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       PhotoElectric :  Emin=        0 eV    Emax=       10 TeV
+
+compt:   for  gamma    SubType= 13
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina :  Emin=        0 eV    Emax=       10 TeV
+
+conv:   for  gamma    SubType= 14
+      Lambda tables from 1.022 MeV to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        BetheHeitler :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for e-    SubType= 10
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=       10 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   AngularGenUrban
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   AngularGenUrban
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   AngularGenUrban
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   AngularGenUrban
+
+annihil:   for  e+    SubType= 5
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for proton    SubType= 10
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc90 :  Emin=        0 eV    Emax=       10 TeV
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+hBrems:   for  proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for kaon+    SubType= 10
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc90 :  Emin=        0 eV    Emax=       10 TeV
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+muMsc:   for mu+    SubType= 10
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc90 :  Emin=        0 eV    Emax=       10 TeV
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+hBrems:   for  pi+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  pi+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for pi-    SubType= 10
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc90 :  Emin=        0 eV    Emax=       10 TeV
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+hBrems:   for  pi-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  pi-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+Region <DefaultRegionForTheWorld> --  -- appears in <physiWorld> world volume
+ This region is in the mass world.
+ Root logical volume(s) : logicWorld 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : Air G4_Al PbGlass386 G4_GLASS_LEAD PbGlass361 
+ Production cuts :   gamma 1 cm      e- 1 cm      e+ 1 cm  proton 1 cm 
+
+Region <DefaultRegionForParallelWorld> --  -- is not associated to any world.
+ Root logical volume(s) : 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : 
+ Production cuts :   gamma 1 cm      e- 1 cm      e+ 1 cm  proton 1 cm 
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes     recalculation needed : No 
+ Material : Air
+ Range cuts        :  gamma  1 cm     e-  1 cm     e+  1 cm  proton 1 cm 
+ Energy thresholds :  gamma  990 eV     e-  17.6927 keV    e+  17.1942 keV proton 1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes     recalculation needed : No 
+ Material : G4_Al
+ Range cuts        :  gamma  1 cm     e-  1 cm     e+  1 cm  proton 1 cm 
+ Energy thresholds :  gamma  20.3682 keV    e-  4.52289 MeV    e+  4.28616 MeV proton 1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes     recalculation needed : No 
+ Material : PbGlass386
+ Range cuts        :  gamma  1 cm     e-  1 cm     e+  1 cm  proton 1 cm 
+ Energy thresholds :  gamma  123.341 keV    e-  5.53312 MeV    e+  5.17351 MeV proton 1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes     recalculation needed : No 
+ Material : G4_GLASS_LEAD
+ Range cuts        :  gamma  1 cm     e-  1 cm     e+  1 cm  proton 1 cm 
+ Energy thresholds :  gamma  168.019 keV    e-  8.62165 MeV    e+  8.06131 MeV proton 1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 4     used in the geometry : Yes     recalculation needed : No 
+ Material : PbGlass361
+ Range cuts        :  gamma  1 cm     e-  1 cm     e+  1 cm  proton 1 cm 
+ Energy thresholds :  gamma  110.767 keV    e-  5.53312 MeV    e+  5.17351 MeV proton 1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+Start closing geometry.
+G4GeometryManager::ReportVoxelStats -- Voxel Statistics
+
+    Total memory consumed for geometry optimisation:   7 kByte
+    Total CPU time elapsed for geometry optimisation: 0 seconds
+
+    Voxelisation: top CPU users:
+    Percent   Total CPU    System CPU       Memory  Volume
+    -------   ----------   ----------     --------  ----------
+       0.00         0.00         0.00            0k logicWorld
+       0.00         0.00         0.00            3k logicFMSS
+       0.00         0.00         0.00            4k logicFMSL
+       0.00         0.00         0.00            0k logicAirCellL
+       0.00         0.00         0.00            0k logicAirCellS
+
+    Voxelisation: top memory users:
+    Percent     Memory      Heads    Nodes   Pointers    Total CPU    Volume
+    -------   --------     ------   ------   --------   ----------    ----------
+      53.27          3k         1       67         69         0.00    logicFMSL
+      37.74          2k         1       47         49         0.00    logicFMSS
+       3.44          0k         1        3          4         0.00    logicWorld
+       2.77          0k         1        2          4         0.00    logicAirCellL
+       2.77          0k         1        2          4         0.00    logicAirCellS
+### Run 0 start.
+Start Run processing.
+----- PREPARING FOR EVENT 0 -----
+>>> begin event 
+
+-------->Hits Collection: in this event they are 611810 hits in the large FMS cells: 
+
+-------->Hits Collection: in this event they are 1128 hits in the small FMS cells: 
+First Parameter = 0.521799
+NormFact = 0.588959
+Normalized First Parameter = 0.885968
+Normalized Value Check @ 420 nm = 1
+Try to Print 611810 Large Cell Hits
+Wave = 467.043
+Norm Damage = 1.12139
+Probability Survive Updated = 66.1744
+Probability Survive Updated Wavelength = 69.1991
+Wave = 436.773
+Norm Damage = 1.0431
+Probability Survive Updated = 66.604
+Probability Survive Updated Wavelength = 67.7317
+Wave = 459.464
+Norm Damage = 1.10179
+Probability Survive Updated = 65.5233
+Probability Survive Updated Wavelength = 68.1332
+Wave = 386.175
+Norm Damage = 0.915165
+Probability Survive Updated = 66.335
+Probability Survive Updated Wavelength = 63.8584
+Wave = 400.965
+Norm Damage = 0.951811
+Probability Survive Updated = 67.5318
+Probability Survive Updated Wavelength = 66.2028
+Wave = 488.18
+Norm Damage = 1.17568
+Probability Survive Updated = 58.8703
+Probability Survive Updated Wavelength = 63.7207
+Wave = 418.479
+Norm Damage = 0.996117
+Probability Survive Updated = 50.8422
+Probability Survive Updated Wavelength = 50.7083
+Wave = 459.604
+Norm Damage = 1.10216
+Probability Survive Updated = 66.2826
+Probability Survive Updated Wavelength = 68.8579
+Wave = 379.299
+Norm Damage = 0.898428
+Probability Survive Updated = 58.3351
+Probability Survive Updated Wavelength = 54.8867
+Wave = 597.604
+Norm Damage = 1.42764
+Probability Survive Updated = 54.1898
+Probability Survive Updated Wavelength = 65.106
+Wave = 505.932
+Norm Damage = 1.22053
+Probability Survive Updated = 56.001
+Probability Survive Updated Wavelength = 62.1862
+Wave = 518.699
+Norm Damage = 1.25216
+Probability Survive Updated = 51.6434
+Probability Survive Updated Wavelength = 58.9942
+Wave = 457.277
+Norm Damage = 1.09614
+Probability Survive Updated = 62.8339
+Probability Survive Updated Wavelength = 65.4475
+Wave = 541.519
+Norm Damage = 1.30693
+Probability Survive Updated = 57.9036
+Probability Survive Updated Wavelength = 65.8315
+Wave = 564.835
+Norm Damage = 1.35988
+Probability Survive Updated = 53.5748
+Probability Survive Updated Wavelength = 63.1958
+Wave = 473.946
+Norm Damage = 1.13919
+Probability Survive Updated = 67.4212
+Probability Survive Updated Wavelength = 70.7481
+Wave = 413.192
+Norm Damage = 0.982657
+Probability Survive Updated = 66.423
+Probability Survive Updated Wavelength = 65.9451
+Wave = 494.25
+Norm Damage = 1.19111
+Probability Survive Updated = 62.174
+Probability Survive Updated Wavelength = 67.1002
+Wave = 399.587
+Norm Damage = 0.948365
+Probability Survive Updated = 68.3338
+Probability Survive Updated Wavelength = 66.9317
+Wave = 548.033
+Norm Damage = 1.32206
+Probability Survive Updated = 66.7309
+Probability Survive Updated Wavelength = 73.6414
+Wave = 477.597
+Norm Damage = 1.14859
+Probability Survive Updated = 66.7434
+Probability Survive Updated Wavelength = 70.3273
+Wave = 414.687
+Norm Damage = 0.986455
+Probability Survive Updated = 57.3605
+Probability Survive Updated Wavelength = 56.9244
+Wave = 454.08
+Norm Damage = 1.08786
+Probability Survive Updated = 54.5433
+Probability Survive Updated Wavelength = 57.2801
+Wave = 484.422
+Norm Damage = 1.16608
+Probability Survive Updated = 58.8689
+Probability Survive Updated Wavelength = 63.4835
+Wave = 479.213
+Norm Damage = 1.15274
+Probability Survive Updated = 66.2802
+Probability Survive Updated Wavelength = 69.9923
+Wave = 430.216
+Norm Damage = 1.0262
+Probability Survive Updated = 59.56
+Probability Survive Updated Wavelength = 60.3532
+Wave = 471.646
+Norm Damage = 1.13327
+Probability Survive Updated = 62.4379
+Probability Survive Updated Wavelength = 65.9937
+Wave = 415.172
+Norm Damage = 0.98769
+Probability Survive Updated = 60.1475
+Probability Survive Updated Wavelength = 59.7675
+Wave = 433.188
+Norm Damage = 1.03385
+Probability Survive Updated = 63.1249
+Probability Survive Updated Wavelength = 64.083
+Wave = 562.908
+Norm Damage = 1.35564
+Probability Survive Updated = 63.3613
+Probability Survive Updated Wavelength = 71.419
+Wave = 571.9
+Norm Damage = 1.3752
+Probability Survive Updated = 57.2306
+Probability Survive Updated Wavelength = 66.6432
+Wave = 367.248
+Norm Damage = 0.869633
+Probability Survive Updated = 71.4603
+Probability Survive Updated Wavelength = 67.9497
+Wave = 552.205
+Norm Damage = 1.33162
+Probability Survive Updated = 74.5081
+Probability Survive Updated Wavelength = 80.1732
+Wave = 435.912
+Norm Damage = 1.04087
+Probability Survive Updated = 75.0263
+Probability Survive Updated Wavelength = 75.8776
+Wave = 411.457
+Norm Damage = 0.978254
+Probability Survive Updated = 71.7602
+Probability Survive Updated Wavelength = 71.2328
+Wave = 434.931
+Norm Damage = 1.03834
+Probability Survive Updated = 67.5618
+Probability Survive Updated Wavelength = 68.5473
+Wave = 507.765
+Norm Damage = 1.22511
+Probability Survive Updated = 57.3072
+Probability Survive Updated Wavelength = 63.4801
+Wave = 373.008
+Norm Damage = 0.883305
+Probability Survive Updated = 73.7733
+Probability Survive Updated Wavelength = 70.8675
+Wave = 400.284
+Norm Damage = 0.950107
+Probability Survive Updated = 72.0933
+Probability Survive Updated Wavelength = 70.8651
+Wave = 396.91
+Norm Damage = 0.941684
+Probability Survive Updated = 73.5257
+Probability Survive Updated Wavelength = 72.1387
+Wave = 429.872
+Norm Damage = 1.02531
+Probability Survive Updated = 71.3003
+Probability Survive Updated Wavelength = 71.8983
+Wave = 449.31
+Norm Damage = 1.07551
+Probability Survive Updated = 61.1551
+Probability Survive Updated Wavelength = 63.3034
+Wave = 486.704
+Norm Damage = 1.17192
+Probability Survive Updated = 61.2055
+Probability Survive Updated Wavelength = 65.7761
+Wave = 421.847
+Norm Damage = 1.00472
+Probability Survive Updated = 56.4213
+Probability Survive Updated Wavelength = 56.5733
+Wave = 432.437
+Norm Damage = 1.03192
+Probability Survive Updated = 64.6318
+Probability Survive Updated Wavelength = 65.5103
+Wave = 434.72
+Norm Damage = 1.0378
+Probability Survive Updated = 67.2908
+Probability Survive Updated Wavelength = 68.2688
+Wave = 511.844
+Norm Damage = 1.23526
+Probability Survive Updated = 70.7725
+Probability Survive Updated Wavelength = 75.5889
+Wave = 411.508
+Norm Damage = 0.978385
+Probability Survive Updated = 63.9733
+Probability Survive Updated Wavelength = 63.345
+Wave = 560.791
+Norm Damage = 1.35095
+Probability Survive Updated = 63.0214
+Probability Survive Updated Wavelength = 71.0521
+Wave = 398.27
+Norm Damage = 0.945075
+Probability Survive Updated = 65.297
+Probability Survive Updated Wavelength = 63.6994
+Wave = 470.229
+Norm Damage = 1.12961
+Probability Survive Updated = 62.4234
+Probability Survive Updated Wavelength = 65.8915
+Wave = 367.355
+Norm Damage = 0.869885
+Probability Survive Updated = 66.4939
+Probability Survive Updated Wavelength = 62.5567
+Wave = 457.114
+Norm Damage = 1.09571
+Probability Survive Updated = 65.6691
+Probability Survive Updated Wavelength = 68.1264
+Wave = 574.468
+Norm Damage = 1.38068
+Probability Survive Updated = 67.0912
+Probability Survive Updated Wavelength = 74.8958
+Wave = 385.758
+Norm Damage = 0.914144
+Probability Survive Updated = 67.3427
+Probability Survive Updated Wavelength = 64.8879
+Wave = 485.185
+Norm Damage = 1.16804
+Probability Survive Updated = 66.0996
+Probability Survive Updated Wavelength = 70.1561
+Wave = 450.345
+Norm Damage = 1.07819
+Probability Survive Updated = 49.3901
+Probability Survive Updated Wavelength = 51.9825
+Wave = 397.143
+Norm Damage = 0.942264
+Probability Survive Updated = 64.7848
+Probability Survive Updated Wavelength = 63.0843
+Wave = 382.026
+Norm Damage = 0.905041
+Probability Survive Updated = 72.0836
+Probability Survive Updated Wavelength = 69.6499
+Wave = 453.25
+Norm Damage = 1.08571
+Probability Survive Updated = 76.3198
+Probability Survive Updated Wavelength = 77.9655
+Wave = 487.897
+Norm Damage = 1.17496
+Probability Survive Updated = 64.7548
+Probability Survive Updated Wavelength = 69.0837
+Wave = 544.723
+Norm Damage = 1.3144
+Probability Survive Updated = 58.3534
+Probability Survive Updated Wavelength = 66.3777
+Wave = 500.31
+Norm Damage = 1.20643
+Probability Survive Updated = 55.0257
+Probability Survive Updated Wavelength = 60.9476
+Wave = 502.895
+Norm Damage = 1.21293
+Probability Survive Updated = 68.4769
+Probability Survive Updated Wavelength = 73.1836
+Wave = 385.895
+Norm Damage = 0.91448
+Probability Survive Updated = 62.3027
+Probability Survive Updated Wavelength = 59.606
+Wave = 518.004
+Norm Damage = 1.25046
+Probability Survive Updated = 71.3482
+Probability Survive Updated Wavelength = 76.3395
+Wave = 391.078
+Norm Damage = 0.927223
+Probability Survive Updated = 73.6115
+Probability Survive Updated Wavelength = 71.8625
+Wave = 433.042
+Norm Damage = 1.03348
+Probability Survive Updated = 61.4823
+Probability Survive Updated Wavelength = 62.4587
+Wave = 583.371
+Norm Damage = 1.39928
+Probability Survive Updated = 74.3308
+Probability Survive Updated Wavelength = 80.8966
+Wave = 524.021
+Norm Damage = 1.26516
+Probability Survive Updated = 59.5359
+Probability Survive Updated Wavelength = 66.3715
+Wave = 502.431
+Norm Damage = 1.21176
+Probability Survive Updated = 73.8328
+Probability Survive Updated Wavelength = 77.8527
+Wave = 393.559
+Norm Damage = 0.933359
+Probability Survive Updated = 76.0423
+Probability Survive Updated Wavelength = 74.5697
+Wave = 476.639
+Norm Damage = 1.14612
+Probability Survive Updated = 61.6367
+Probability Survive Updated Wavelength = 65.5592
+Wave = 429.164
+Norm Damage = 1.02349
+Probability Survive Updated = 78.005
+Probability Survive Updated Wavelength = 78.451
+Wave = 562.286
+Norm Damage = 1.35426
+Probability Survive Updated = 72.5257
+Probability Survive Updated Wavelength = 78.8835
+Wave = 516.702
+Norm Damage = 1.24726
+Probability Survive Updated = 67.2807
+Probability Survive Updated Wavelength = 72.7796
+Wave = 459.056
+Norm Damage = 1.10074
+Probability Survive Updated = 62.1865
+Probability Survive Updated Wavelength = 64.9497
+Wave = 505.792
+Norm Damage = 1.22019
+Probability Survive Updated = 61.6863
+Probability Survive Updated Wavelength = 67.3054
+Wave = 551.271
+Norm Damage = 1.32949
+Probability Survive Updated = 77.7617
+Probability Survive Updated Wavelength = 82.7632
+Wave = 376.612
+Norm Damage = 0.891946
+Probability Survive Updated = 72.2674
+Probability Survive Updated Wavelength = 69.4791
+Wave = 509.772
+Norm Damage = 1.23011
+Probability Survive Updated = 62.0403
+Probability Survive Updated Wavelength = 67.8355
+Wave = 434.675
+Norm Damage = 1.03768
+Probability Survive Updated = 64.9342
+Probability Survive Updated Wavelength = 65.9605
+Wave = 510.804
+Norm Damage = 1.23268
+Probability Survive Updated = 59.166
+Probability Survive Updated Wavelength = 65.3274
+Wave = 368.747
+Norm Damage = 0.873174
+Probability Survive Updated = 51.6277
+Probability Survive Updated Wavelength = 46.9008
+Wave = 431.001
+Norm Damage = 1.02822
+Probability Survive Updated = 53.4859
+Probability Survive Updated Wavelength = 54.4123
+Wave = 507.145
+Norm Damage = 1.22357
+Probability Survive Updated = 70.6898
+Probability Survive Updated Wavelength = 75.3151
+Wave = 456.378
+Norm Damage = 1.09381
+Probability Survive Updated = 68.9928
+Probability Survive Updated Wavelength = 71.2244
+Wave = 409.639
+Norm Damage = 0.973651
+Probability Survive Updated = 60.5776
+Probability Survive Updated Wavelength = 59.7614
+Wave = 472.929
+Norm Damage = 1.13657
+Probability Survive Updated = 69.2091
+Probability Survive Updated Wavelength = 72.3385
+Wave = 406.628
+Norm Damage = 0.966043
+Probability Survive Updated = 70.3839
+Probability Survive Updated Wavelength = 69.5203
+Wave = 522.435
+Norm Damage = 1.2613
+Probability Survive Updated = 66.1868
+Probability Survive Updated Wavelength = 72.0944
+Wave = 420.372
+Norm Damage = 1.00095
+Probability Survive Updated = 66.1275
+Probability Survive Updated Wavelength = 66.1534
+Wave = 464.018
+Norm Damage = 1.11357
+Probability Survive Updated = 60.4679
+Probability Survive Updated Wavelength = 63.6513
+Wave = 421.583
+Norm Damage = 1.00405
+Probability Survive Updated = 65.0368
+Probability Survive Updated Wavelength = 65.1497
+Wave = 406.057
+Norm Damage = 0.964605
+Probability Survive Updated = 69.8522
+Probability Survive Updated Wavelength = 68.9387
+Wave = 385.377
+Norm Damage = 0.913211
+Probability Survive Updated = 70.5385
+Probability Survive Updated Wavelength = 68.2372
+Wave = 572.012
+Norm Damage = 1.37545
+Probability Survive Updated = 65.1262
+Probability Survive Updated Wavelength = 73.2139
+Wave = 473.181
+Norm Damage = 1.13722
+Probability Survive Updated = 62.9667
+Probability Survive Updated Wavelength = 66.5811
+Wave = 549.477
+Norm Damage = 1.32538
+Probability Survive Updated = 72.9303
+Probability Survive Updated Wavelength = 78.8069
+Wave = 442.953
+Norm Damage = 1.05906
+Probability Survive Updated = 70.5451
+Probability Survive Updated Wavelength = 71.9313
+Wave = 380.922
+Norm Damage = 0.902358
+Probability Survive Updated = 70.693
+Probability Survive Updated Wavelength = 68.0891
+Wave = 384.44
+Norm Damage = 0.910921
+Probability Survive Updated = 70.3825
+Probability Survive Updated Wavelength = 68.0062
+Wave = 420.604
+Norm Damage = 1.00154
+Probability Survive Updated = 57.4586
+Probability Survive Updated Wavelength = 57.5077
+Wave = 433.289
+Norm Damage = 1.03411
+Probability Survive Updated = 68.2635
+Probability Survive Updated Wavelength = 69.1287
+Wave = 567.681
+Norm Damage = 1.3661
+Probability Survive Updated = 30.6043
+Probability Survive Updated Wavelength = 42.0326
+Wave = 402.398
+Norm Damage = 0.955404
+Probability Survive Updated = 63.1222
+Probability Survive Updated Wavelength = 61.7811
+Wave = 562.53
+Norm Damage = 1.3548
+Probability Survive Updated = 62.5649
+Probability Survive Updated Wavelength = 70.7406
+Wave = 492.575
+Norm Damage = 1.18687
+Probability Survive Updated = 65.9502
+Probability Survive Updated Wavelength = 70.4173
+Wave = 571.793
+Norm Damage = 1.37498
+Probability Survive Updated = 68.9223
+Probability Survive Updated Wavelength = 76.2854
+Wave = 392.682
+Norm Damage = 0.931188
+Probability Survive Updated = 69.5242
+Probability Survive Updated Wavelength = 67.6816
+Wave = 518.445
+Norm Damage = 1.25154
+Probability Survive Updated = 69.9513
+Probability Survive Updated Wavelength = 75.1605
+Wave = 557.962
+Norm Damage = 1.34463
+Probability Survive Updated = 36.8859
+Probability Survive Updated Wavelength = 47.6294
+Wave = 487.848
+Norm Damage = 1.17483
+Probability Survive Updated = 63.58
+Probability Survive Updated Wavelength = 68.0126
+Wave = 504.745
+Norm Damage = 1.21757
+Probability Survive Updated = 64.2192
+Probability Survive Updated Wavelength = 69.5078
+Wave = 461.915
+Norm Damage = 1.10814
+Probability Survive Updated = 70.4935
+Probability Survive Updated Wavelength = 72.9403
+Wave = 452.573
+Norm Damage = 1.08396
+Probability Survive Updated = 63.9247
+Probability Survive Updated Wavelength = 66.1791
+Wave = 448.965
+Norm Damage = 1.07462
+Probability Survive Updated = 62.6965
+Probability Survive Updated Wavelength = 64.7623
+Wave = 492.736
+Norm Damage = 1.18727
+Probability Survive Updated = 66.6984
+Probability Survive Updated Wavelength = 71.0982
+Wave = 386.51
+Norm Damage = 0.915987
+Probability Survive Updated = 68.5758
+Probability Survive Updated Wavelength = 66.2437
+Wave = 416.355
+Norm Damage = 0.990701
+Probability Survive Updated = 66.1832
+Probability Survive Updated Wavelength = 65.9273
+Wave = 569.923
+Norm Damage = 1.37095
+Probability Survive Updated = 64.664
+Probability Survive Updated Wavelength = 72.7602
+Wave = 437.054
+Norm Damage = 1.04382
+Probability Survive Updated = 53.2941
+Probability Survive Updated Wavelength = 54.721
+Wave = 552.646
+Norm Damage = 1.33263
+Probability Survive Updated = 63.1937
+Probability Survive Updated Wavelength = 70.8641
+Wave = 439.539
+Norm Damage = 1.05024
+Probability Survive Updated = 63.7368
+Probability Survive Updated Wavelength = 65.1249
+Wave = 500.429
+Norm Damage = 1.20673
+Probability Survive Updated = 51.3495
+Probability Survive Updated Wavelength = 57.5605
+Wave = 503.136
+Norm Damage = 1.21353
+Probability Survive Updated = 61.5713
+Probability Survive Updated Wavelength = 67.0562
+Wave = 368.201
+Norm Damage = 0.871883
+Probability Survive Updated = 67.4166
+Probability Survive Updated Wavelength = 63.6217
+Wave = 421.521
+Norm Damage = 1.00389
+Probability Survive Updated = 53.8649
+Probability Survive Updated Wavelength = 53.9941
+Wave = 529.2
+Norm Damage = 1.27768
+Probability Survive Updated = 61.9617
+Probability Survive Updated Wavelength = 68.7545
+Wave = 434.741
+Norm Damage = 1.03785
+Probability Survive Updated = 62.3978
+Probability Survive Updated Wavelength = 63.4805
+Wave = 536.231
+Norm Damage = 1.29447
+Probability Survive Updated = 62.2944
+Probability Survive Updated Wavelength = 69.3758
+Wave = 392.828
+Norm Damage = 0.931549
+Probability Survive Updated = 59.9424
+Probability Survive Updated Wavelength = 57.73
+Wave = 440.898
+Norm Damage = 1.05375
+Probability Survive Updated = 60.1228
+Probability Survive Updated Wavelength = 61.7035
+Wave = 457.25
+Norm Damage = 1.09607
+Probability Survive Updated = 53.8678
+Probability Survive Updated Wavelength = 56.8692
+Wave = 517.329
+Norm Damage = 1.2488
+Probability Survive Updated = 61.3124
+Probability Survive Updated Wavelength = 67.5889
+Wave = 445.742
+Norm Damage = 1.06628
+Probability Survive Updated = 61.6563
+Probability Survive Updated Wavelength = 63.5377
+Wave = 466.451
+Norm Damage = 1.11986
+Probability Survive Updated = 65.8219
+Probability Survive Updated Wavelength = 68.8352
+Wave = 458.024
+Norm Damage = 1.09807
+Probability Survive Updated = 58.0957
+Probability Survive Updated Wavelength = 60.983
+Wave = 428.451
+Norm Damage = 1.02166
+Probability Survive Updated = 62.4921
+Probability Survive Updated Wavelength = 63.1181
+Wave = 484.022
+Norm Damage = 1.16506
+Probability Survive Updated = 65.7211
+Probability Survive Updated Wavelength = 69.748
+Wave = 436.296
+Norm Damage = 1.04186
+Probability Survive Updated = 56.9745
+Probability Survive Updated Wavelength = 58.277
+Wave = 444.182
+Norm Damage = 1.06224
+Probability Survive Updated = 73.8716
+Probability Survive Updated Wavelength = 75.1941
+Wave = 596.794
+Norm Damage = 1.42608
+Probability Survive Updated = 15.4887
+Probability Survive Updated Wavelength = 27.0407
+Wave = 417.214
+Norm Damage = 0.99289
+Probability Survive Updated = 69.326
+Probability Survive Updated Wavelength = 69.1444
+Wave = 473.431
+Norm Damage = 1.13787
+Probability Survive Updated = 75.3311
+Probability Survive Updated Wavelength = 77.9616
+Wave = 559.408
+Norm Damage = 1.34787
+Probability Survive Updated = 71.0242
+Probability Survive Updated Wavelength = 77.5812
+Wave = 421.234
+Norm Damage = 1.00315
+Probability Survive Updated = 64.3709
+Probability Survive Updated Wavelength = 64.4601
+Wave = 605.099
+Norm Damage = 1.44185
+Probability Survive Updated = 59.4157
+Probability Survive Updated Wavelength = 69.6928
+Wave = 391.886
+Norm Damage = 0.929218
+Probability Survive Updated = 69.5429
+Probability Survive Updated Wavelength = 67.6452
+Wave = 538.741
+Norm Damage = 1.3004
+Probability Survive Updated = 67.4466
+Probability Survive Updated Wavelength = 73.8706
+Wave = 511.67
+Norm Damage = 1.23483
+Probability Survive Updated = 65.1744
+Probability Survive Updated Wavelength = 70.7023
+Wave = 440.842
+Norm Damage = 1.05361
+Probability Survive Updated = 63.6664
+Probability Survive Updated Wavelength = 65.1459
+Wave = 509.23
+Norm Damage = 1.22876
+Probability Survive Updated = 65.3755
+Probability Survive Updated Wavelength = 70.7587
+Wave = 440.086
+Norm Damage = 1.05165
+Probability Survive Updated = 68.7034
+Probability Survive Updated Wavelength = 69.9818
+Wave = 437.334
+Norm Damage = 1.04454
+Probability Survive Updated = 67.5036
+Probability Survive Updated Wavelength = 68.6445
+Wave = 602.904
+Norm Damage = 1.43774
+Probability Survive Updated = 47.6043
+Probability Survive Updated Wavelength = 59.6749
+Wave = 433.897
+Norm Damage = 1.03568
+Probability Survive Updated = 63.7463
+Probability Survive Updated Wavelength = 64.7427
+Wave = 403.198
+Norm Damage = 0.957412
+Probability Survive Updated = 75.0072
+Probability Survive Updated Wavelength = 74.0537
+Wave = 479.34
+Norm Damage = 1.15306
+Probability Survive Updated = 80.0138
+Probability Survive Updated Wavelength = 82.4174
+Wave = 444.999
+Norm Damage = 1.06435
+Probability Survive Updated = 66.6416
+Probability Survive Updated Wavelength = 68.2971
+Wave = 519.02
+Norm Damage = 1.25295
+Probability Survive Updated = 57.2022
+Probability Survive Updated Wavelength = 64.0306
+Wave = 453.082
+Norm Damage = 1.08528
+Probability Survive Updated = 53.0122
+Probability Survive Updated Wavelength = 55.7228
+Wave = 431.982
+Norm Damage = 1.03074
+Probability Survive Updated = 60.0622
+Probability Survive Updated Wavelength = 60.9824
+Wave = 446.554
+Norm Damage = 1.06838
+Probability Survive Updated = 63.6341
+Probability Survive Updated Wavelength = 65.502
+Wave = 377.075
+Norm Damage = 0.89306
+Probability Survive Updated = 63.7466
+Probability Survive Updated Wavelength = 60.4007
+Wave = 395.386
+Norm Damage = 0.937893
+Probability Survive Updated = 63.7669
+Probability Survive Updated Wavelength = 61.895
+Wave = 504.178
+Norm Damage = 1.21614
+Probability Survive Updated = 65.5645
+Probability Survive Updated Wavelength = 70.6728
+Wave = 368.811
+Norm Damage = 0.873327
+Probability Survive Updated = 56.1466
+Probability Survive Updated Wavelength = 51.6373
+Wave = 408.108
+Norm Damage = 0.969779
+Probability Survive Updated = 67.2459
+Probability Survive Updated Wavelength = 66.4194
+Wave = 421.601
+Norm Damage = 1.00409
+Probability Survive Updated = 68.9465
+Probability Survive Updated Wavelength = 69.051
+Wave = 434.237
+Norm Damage = 1.03655
+Probability Survive Updated = 50.8761
+Probability Survive Updated Wavelength = 52.1031
+Wave = 573.134
+Norm Damage = 1.37784
+Probability Survive Updated = 33.1885
+Probability Survive Updated Wavelength = 44.9103
+Wave = 543.904
+Norm Damage = 1.3125
+Probability Survive Updated = 67.6408
+Probability Survive Updated Wavelength = 74.2395
+Wave = 502.3
+Norm Damage = 1.21143
+Probability Survive Updated = 56.4076
+Probability Survive Updated Wavelength = 62.3357
+Wave = 410.936
+Norm Damage = 0.976935
+Probability Survive Updated = 66.5525
+Probability Survive Updated Wavelength = 65.9158
+Wave = 523.203
+Norm Damage = 1.26317
+Probability Survive Updated = 64.663
+Probability Survive Updated Wavelength = 70.8114
+Wave = 503.706
+Norm Damage = 1.21496
+Probability Survive Updated = 66.5756
+Probability Survive Updated Wavelength = 71.5444
+Wave = 439.612
+Norm Damage = 1.05043
+Probability Survive Updated = 55.8579
+Probability Survive Updated Wavelength = 57.4415
+Wave = 460.201
+Norm Damage = 1.1037
+Probability Survive Updated = 47.0286
+Probability Survive Updated Wavelength = 50.4832
+Wave = 508.829
+Norm Damage = 1.22777
+Probability Survive Updated = 62.9135
+Probability Survive Updated Wavelength = 68.5613
+Wave = 398.462
+Norm Damage = 0.945555
+Probability Survive Updated = 57.5402
+Probability Survive Updated Wavelength = 55.7378
+Wave = 537.325
+Norm Damage = 1.29706
+Probability Survive Updated = 63.2896
+Probability Survive Updated Wavelength = 70.2801
+Wave = 587.648
+Norm Damage = 1.40799
+Probability Survive Updated = 58.9448
+Probability Survive Updated Wavelength = 68.701
+Wave = 363.458
+Norm Damage = 0.860735
+Probability Survive Updated = 66.9971
+Probability Survive Updated Wavelength = 62.7932
+Wave = 492.992
+Norm Damage = 1.18792
+Probability Survive Updated = 50.7163
+Probability Survive Updated Wavelength = 56.4666
+Wave = 498.369
+Norm Damage = 1.20153
+Probability Survive Updated = 66.6169
+Probability Survive Updated Wavelength = 71.314
+Wave = 477.535
+Norm Damage = 1.14843
+Probability Survive Updated = 69.8654
+Probability Survive Updated Wavelength = 73.1796
+Wave = 366.653
+Norm Damage = 0.868231
+Probability Survive Updated = 64.6297
+Probability Survive Updated Wavelength = 60.487
+Wave = 446.64
+Norm Damage = 1.0686
+Probability Survive Updated = 66.4436
+Probability Survive Updated Wavelength = 68.2105
+Wave = 473.168
+Norm Damage = 1.13719
+Probability Survive Updated = 58.7866
+Probability Survive Updated Wavelength = 62.6776
+Wave = 509.416
+Norm Damage = 1.22923
+Probability Survive Updated = 53.8131
+Probability Survive Updated Wavelength = 60.4049
+Wave = 389.269
+Norm Damage = 0.922762
+Probability Survive Updated = 56.7793
+Probability Survive Updated Wavelength = 54.1521
+Wave = 494.988
+Norm Damage = 1.19299
+Probability Survive Updated = 63.1237
+Probability Survive Updated Wavelength = 68.0009
+Wave = 518.735
+Norm Damage = 1.25225
+Probability Survive Updated = 71.2242
+Probability Survive Updated Wavelength = 76.263
+Wave = 447.875
+Norm Damage = 1.0718
+Probability Survive Updated = 64.746
+Probability Survive Updated Wavelength = 66.659
+Wave = 394.223
+Norm Damage = 0.935006
+Probability Survive Updated = 68.2027
+Probability Survive Updated Wavelength = 66.4123
+Wave = 542.851
+Norm Damage = 1.31004
+Probability Survive Updated = 64.553
+Probability Survive Updated Wavelength = 71.5983
+Wave = 429.953
+Norm Damage = 1.02552
+Probability Survive Updated = 58.991
+Probability Survive Updated Wavelength = 59.771
+Wave = 536.251
+Norm Damage = 1.29452
+Probability Survive Updated = 65.7535
+Probability Survive Updated Wavelength = 72.3343
+Wave = 454.026
+Norm Damage = 1.08772
+Probability Survive Updated = 65.4807
+Probability Survive Updated Wavelength = 67.7552
+Wave = 482.642
+Norm Damage = 1.16153
+Probability Survive Updated = 64.5166
+Probability Survive Updated Wavelength = 68.5709
+Wave = 474.658
+Norm Damage = 1.14103
+Probability Survive Updated = 60.542
+Probability Survive Updated Wavelength = 64.4161
+Wave = 456.725
+Norm Damage = 1.09471
+Probability Survive Updated = 45.8868
+Probability Survive Updated Wavelength = 49.0858
+Wave = 400.737
+Norm Damage = 0.95124
+Probability Survive Updated = 63.7854
+Probability Survive Updated Wavelength = 62.332
+Wave = 524.73
+Norm Damage = 1.26688
+Probability Survive Updated = 59.5337
+Probability Survive Updated Wavelength = 66.4066
+Wave = 431.858
+Norm Damage = 1.03042
+Probability Survive Updated = 55.9133
+Probability Survive Updated Wavelength = 56.8814
+Wave = 418.361
+Norm Damage = 0.995814
+Probability Survive Updated = 50.1735
+Probability Survive Updated Wavelength = 50.0282
+Wave = 399.503
+Norm Damage = 0.948155
+Probability Survive Updated = 61.6762
+Probability Survive Updated Wavelength = 60.0678
+Wave = 499.949
+Norm Damage = 1.20552
+Probability Survive Updated = 50.3349
+Probability Survive Updated Wavelength = 56.5842
+Wave = 572.002
+Norm Damage = 1.37542
+Probability Survive Updated = 61.3708
+Probability Survive Updated Wavelength = 70.1193
+Wave = 435.431
+Norm Damage = 1.03963
+Probability Survive Updated = 51.8436
+Probability Survive Updated Wavelength = 53.1584
+Wave = 448.56
+Norm Damage = 1.07357
+Probability Survive Updated = 52.18
+Probability Survive Updated Wavelength = 54.5586
+Wave = 533.786
+Norm Damage = 1.28866
+Probability Survive Updated = 52.1341
+Probability Survive Updated Wavelength = 60.3235
+Wave = 419.409
+Norm Damage = 0.998491
+Probability Survive Updated = 56.3703
+Probability Survive Updated Wavelength = 56.3215
+Wave = 457.978
+Norm Damage = 1.09795
+Probability Survive Updated = 57.6564
+Probability Survive Updated Wavelength = 60.5596
+Wave = 388.022
+Norm Damage = 0.919695
+Probability Survive Updated = 59.7425
+Probability Survive Updated Wavelength = 57.1149
+Wave = 462.697
+Norm Damage = 1.11016
+Probability Survive Updated = 68.3074
+Probability Survive Updated Wavelength = 70.9403
+Wave = 487.931
+Norm Damage = 1.17505
+Probability Survive Updated = 68.2833
+Probability Survive Updated Wavelength = 72.2765
+Wave = 378.118
+Norm Damage = 0.895574
+Probability Survive Updated = 70.2634
+Probability Survive Updated Wavelength = 67.4307
+Wave = 403.526
+Norm Damage = 0.958237
+Probability Survive Updated = 61.6073
+Probability Survive Updated Wavelength = 60.3203
+Wave = 424.563
+Norm Damage = 1.01168
+Probability Survive Updated = 46.1815
+Probability Survive Updated Wavelength = 46.5952
+Wave = 552.005
+Norm Damage = 1.33117
+Probability Survive Updated = 57.1332
+Probability Survive Updated Wavelength = 65.6703
+Wave = 404.758
+Norm Damage = 0.961333
+Probability Survive Updated = 61.5103
+Probability Survive Updated Wavelength = 60.3197
+Wave = 458.227
+Norm Damage = 1.0986
+Probability Survive Updated = 54.1046
+Probability Survive Updated Wavelength = 57.171
+Wave = 464.609
+Norm Damage = 1.1151
+Probability Survive Updated = 38.6721
+Probability Survive Updated Wavelength = 42.6567
+Wave = 492.796
+Norm Damage = 1.18743
+Probability Survive Updated = 41.919
+Probability Survive Updated Wavelength = 48.0851
+Wave = 519.75
+Norm Damage = 1.25474
+Probability Survive Updated = 42.1036
+Probability Survive Updated Wavelength = 50.1869
+Wave = 500.405
+Norm Damage = 1.20667
+Probability Survive Updated = 58.0105
+Probability Survive Updated Wavelength = 63.6812
+Wave = 363.165
+Norm Damage = 0.860049
+Probability Survive Updated = 54.1626
+Probability Survive Updated Wavelength = 49.0192
+Wave = 448.887
+Norm Damage = 1.07442
+Probability Survive Updated = 55.5329
+Probability Survive Updated Wavelength = 57.842
+Wave = 465.083
+Norm Damage = 1.11633
+Probability Survive Updated = 61.9539
+Probability Survive Updated Wavelength = 65.1233
+Wave = 597.216
+Norm Damage = 1.42689
+Probability Survive Updated = 64.8339
+Probability Survive Updated Wavelength = 73.8085
+Wave = 376.317
+Norm Damage = 0.891235
+Probability Survive Updated = 60.6702
+Probability Survive Updated Wavelength = 57.0808
+Wave = 557.292
+Norm Damage = 1.34313
+Probability Survive Updated = 68.9266
+Probability Survive Updated Wavelength = 75.8009
+Wave = 371.842
+Norm Damage = 0.880523
+Probability Survive Updated = 62.5825
+Probability Survive Updated Wavelength = 58.7265
+Wave = 380.327
+Norm Damage = 0.900918
+Probability Survive Updated = 62.6579
+Probability Survive Updated Wavelength = 59.5179
+Wave = 558.231
+Norm Damage = 1.34524
+Probability Survive Updated = 49.4242
+Probability Survive Updated Wavelength = 59.2223
+Wave = 545.072
+Norm Damage = 1.31521
+Probability Survive Updated = 57.9516
+Probability Survive Updated Wavelength = 66.0466
+Wave = 459.168
+Norm Damage = 1.10103
+Probability Survive Updated = 39.7073
+Probability Survive Updated Wavelength = 43.2193
+Wave = 502.757
+Norm Damage = 1.21258
+Probability Survive Updated = 38.0012
+Probability Survive Updated Wavelength = 45.0261
+Wave = 444.725
+Norm Damage = 1.06365
+Probability Survive Updated = 46.5311
+Probability Survive Updated Wavelength = 48.7107
+Wave = 456.67
+Norm Damage = 1.09456
+Probability Survive Updated = 54.2623
+Probability Survive Updated Wavelength = 57.2053
+Wave = 579.534
+Norm Damage = 1.39134
+Probability Survive Updated = 51.259
+Probability Survive Updated Wavelength = 61.8591
+Wave = 515.29
+Norm Damage = 1.24378
+Probability Survive Updated = 44.8743
+Probability Survive Updated Wavelength = 52.5056
+Wave = 527.096
+Norm Damage = 1.27261
+Probability Survive Updated = 49.7834
+Probability Survive Updated Wavelength = 57.8059
+Wave = 417.454
+Norm Damage = 0.993501
+Probability Survive Updated = 56.2502
+Probability Survive Updated Wavelength = 56.0389
+Wave = 469.489
+Norm Damage = 1.12771
+Probability Survive Updated = 57.7241
+Probability Survive Updated Wavelength = 61.4302
+Wave = 371.601
+Norm Damage = 0.879949
+Probability Survive Updated = 62.447
+Probability Survive Updated Wavelength = 58.5617
+Wave = 551.213
+Norm Damage = 1.32936
+Probability Survive Updated = 44.2311
+Probability Survive Updated Wavelength = 54.1379
+Wave = 524.173
+Norm Damage = 1.26552
+Probability Survive Updated = 53.3748
+Probability Survive Updated Wavelength = 60.8898
+Wave = 366.018
+Norm Damage = 0.866736
+Probability Survive Updated = 52.3182
+Probability Survive Updated Wavelength = 47.3581
+Wave = 433.616
+Norm Damage = 1.03495
+Probability Survive Updated = 53.4598
+Probability Survive Updated Wavelength = 54.6025
+Wave = 548.979
+Norm Damage = 1.32424
+Probability Survive Updated = 26.3758
+Probability Survive Updated Wavelength = 36.5529
+Wave = 471.032
+Norm Damage = 1.13169
+Probability Survive Updated = 51.2088
+Probability Survive Updated Wavelength = 55.3562
+Wave = 496.279
+Norm Damage = 1.19625
+Probability Survive Updated = 56.4197
+Probability Survive Updated Wavelength = 61.9742
+Wave = 400.182
+Norm Damage = 0.949853
+Probability Survive Updated = 54.7901
+Probability Survive Updated Wavelength = 53.0771
+Wave = 557.576
+Norm Damage = 1.34377
+Probability Survive Updated = 55.1406
+Probability Survive Updated Wavelength = 64.2109
+Wave = 400.108
+Norm Damage = 0.949666
+Probability Survive Updated = 64.9256
+Probability Survive Updated Wavelength = 63.4561
+Wave = 383.069
+Norm Damage = 0.90758
+Probability Survive Updated = 60.3642
+Probability Survive Updated Wavelength = 57.3398
+Wave = 411.753
+Norm Damage = 0.979004
+Probability Survive Updated = 69.5248
+Probability Survive Updated Wavelength = 68.9849
+Wave = 415.085
+Norm Damage = 0.987468
+Probability Survive Updated = 62.0229
+Probability Survive Updated Wavelength = 61.6481
+Wave = 517.628
+Norm Damage = 1.24953
+Probability Survive Updated = 60.4754
+Probability Survive Updated Wavelength = 66.8648
+Wave = 509.997
+Norm Damage = 1.23067
+Probability Survive Updated = 62.8529
+Probability Survive Updated Wavelength = 68.5688
+Wave = 592.527
+Norm Damage = 1.41773
+Probability Survive Updated = 46.6916
+Probability Survive Updated Wavelength = 58.4381
+Wave = 426.903
+Norm Damage = 1.01768
+Probability Survive Updated = 50.786
+Probability Survive Updated Wavelength = 51.3874
+Wave = 514.397
+Norm Damage = 1.24158
+Probability Survive Updated = 22.8871
+Probability Survive Updated Wavelength = 30.4928
+Wave = 493.769
+Norm Damage = 1.1899
+Probability Survive Updated = 57.1241
+Probability Survive Updated Wavelength = 62.4639
+Wave = 425.099
+Norm Damage = 1.01305
+Probability Survive Updated = 65.4199
+Probability Survive Updated Wavelength = 65.7786
+Wave = 405.477
+Norm Damage = 0.963145
+Probability Survive Updated = 60.695
+Probability Survive Updated Wavelength = 59.5464
+Wave = 538.006
+Norm Damage = 1.29867
+Probability Survive Updated = 65.4267
+Probability Survive Updated Wavelength = 72.132
+Wave = 403.258
+Norm Damage = 0.957564
+Probability Survive Updated = 66.2454
+Probability Survive Updated Wavelength = 65.0474
+Wave = 481.815
+Norm Damage = 1.15941
+Probability Survive Updated = 60.5962
+Probability Survive Updated Wavelength = 64.9169
+Wave = 432.312
+Norm Damage = 1.0316
+Probability Survive Updated = 65.6373
+Probability Survive Updated Wavelength = 66.4891
+Wave = 397.709
+Norm Damage = 0.943676
+Probability Survive Updated = 65.6639
+Probability Survive Updated Wavelength = 64.0359
+Wave = 430.421
+Norm Damage = 1.02673
+Probability Survive Updated = 59.9133
+Probability Survive Updated Wavelength = 60.7175
+Wave = 517.853
+Norm Damage = 1.25009
+Probability Survive Updated = 64.7317
+Probability Survive Updated Wavelength = 70.6162
+Wave = 518.215
+Norm Damage = 1.25098
+Probability Survive Updated = 59.6899
+Probability Survive Updated Wavelength = 66.2005
+Wave = 445.667
+Norm Damage = 1.06608
+Probability Survive Updated = 59.4051
+Probability Survive Updated Wavelength = 61.354
+Wave = 570.887
+Norm Damage = 1.37303
+Probability Survive Updated = 66.676
+Probability Survive Updated Wavelength = 74.4379
+Wave = 384.535
+Norm Damage = 0.911154
+Probability Survive Updated = 59.7128
+Probability Survive Updated Wavelength = 56.7848
+Wave = 438.614
+Norm Damage = 1.04785
+Probability Survive Updated = 61.9643
+Probability Survive Updated Wavelength = 63.3334
+Wave = 445.638
+Norm Damage = 1.06601
+Probability Survive Updated = 66.4401
+Probability Survive Updated Wavelength = 68.1437
+Wave = 381.77
+Norm Damage = 0.904418
+Probability Survive Updated = 63.0287
+Probability Survive Updated Wavelength = 60.0279
+Wave = 372.517
+Norm Damage = 0.882133
+Probability Survive Updated = 66.1845
+Probability Survive Updated Wavelength = 62.6335
+Wave = 598.76
+Norm Damage = 1.42987
+Probability Survive Updated = 67.4211
+Probability Survive Updated Wavelength = 75.9042
+Wave = 454.955
+Norm Damage = 1.09012
+Probability Survive Updated = 66.2275
+Probability Survive Updated Wavelength = 68.5226
+Wave = 394.991
+Norm Damage = 0.936912
+Probability Survive Updated = 59.8494
+Probability Survive Updated Wavelength = 57.8159
+Wave = 421.148
+Norm Damage = 1.00293
+Probability Survive Updated = 56.1993
+Probability Survive Updated Wavelength = 56.2942
+Esum=->9.9326747 Ncerenkov=543933(54761.987 photons/GeV)
+Try to Print 1128 Small Cell Hits
+Esum=->0.025680036 Ncerenkov=865(33683.754 photons/GeV)
+HT (n1,r7,c10)
+HT (n1,r7,c10)
+HT (n1,r7,c10)
+HT (n0,r0,c0)
+Run terminated.
+Run Summary
+  Number of events processed : 1
+  User=15.71s Real=15.87s Sys=0.15s
+writing data...
+UserDetectorConstruction deleted.
+UserPhysicsList deleted.
+UserRunAction deleted.
+UserPrimaryGenerator deleted.
+G4 kernel has come to Quit state.
+G4SDManager deleted.
+EventManager deleted.
+UImanager deleted.
+Units table cleared.
+StateManager deleted.
+RunManagerKernel is deleted.
+RunManager is deleting.
+simulation complete

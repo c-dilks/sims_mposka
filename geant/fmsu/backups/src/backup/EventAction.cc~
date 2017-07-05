@@ -1,0 +1,312 @@
+#include "EventAction.hh"
+#include "FMSlargeHit.hh"
+#include "FMSsmallHit.hh"
+#include "G4Event.hh"
+#include "G4EventManager.hh"
+#include "G4TrajectoryContainer.hh"
+#include "Trajectory.hh"
+#include "G4ios.hh"
+#include "stdio.h"
+#include "TTree.h"
+#include "TVector3.h"
+#include "PostSim.hh"
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+EventAction::EventAction(FILE* fp0,TFile* tf0, TTree* geotr, Int_t vntnmbr)
+{
+
+  pFile=tf0;
+  eventNum=vntnmbr;
+
+  pss=new PostSim();
+  pss->eventnumber=eventNum;
+  trj=new Trajectory();
+
+  evnum_=-1;
+  nsaved_traj=0;
+  memset(parentID,0,sizeof(parentID));
+  memset(trackID,0,sizeof(trackID));
+  memset(mass,0,sizeof(mass));
+  memset(energy,0,sizeof(energy));
+  memset(vx,0,sizeof(vx));
+  memset(vy,0,sizeof(vy));
+  memset(vz,0,sizeof(vz));
+  memset(px,0,sizeof(px));
+  memset(py,0,sizeof(py));
+  memset(pz,0,sizeof(pz));
+
+  EventAction::testtree= new TTree("testtree","testtree");
+
+  testtree->Branch("nsaved_traj", &(EventAction::nsaved_traj), "nsaved_traj/I");
+  testtree->Branch("parentID", EventAction::parentID, "parentID[nsaved_traj]/I");
+  testtree->Branch("trackID", EventAction::trackID, "trackID[nsaved_traj]/I");
+  testtree->Branch("mass", EventAction::mass, "mass[nsaved_traj]/D");
+  testtree->Branch("energy",EventAction::energy,"energy[nsaved_traj]/D");
+  testtree->Branch("vx", EventAction::vx, "vx[nsaved_traj]/D");
+  testtree->Branch("vy", EventAction::vy, "vy[nsaved_traj]/D");
+  testtree->Branch("vz", EventAction::vz, "vz[nsaved_traj]/D");
+  testtree->Branch("px", EventAction::px, "px[nsaved_traj]/D");
+  testtree->Branch("py", EventAction::py, "py[nsaved_traj]/D");
+  testtree->Branch("pz", EventAction::pz, "pz[nsaved_traj]/D");
+//  testtree->Branch("nqtdata",&(pss->nQTdata),"nqtdata/i");
+//  testtree->Branch("QTdata",pss->QTdata,"Qtdata[nqtdata]/i");
+  testtree->Branch("myvectest",&myvectest);
+  testtree->Branch("histograms",pss->evpos);
+
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+EventAction::~EventAction()
+{
+  if(pss) delete pss;
+}
+
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void EventAction::BeginOfEventAction(const G4Event* event)
+{
+  G4cout << ">>> begin event "<< G4endl;
+  pss->nprimaries=(int) event->GetNumberOfPrimaryVertex();
+
+
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void EventAction::EndOfEventAction(const G4Event* evt)
+{
+  std::vector<UInt_t> myvec;
+  std::vector<G4QT> myvec2;
+  evnum_++;
+  pFile->cd();
+  nsaved_traj=0;
+  nhits=0;
+  G4QT test;
+
+  // get number of stored trajectories
+  //
+  G4TrajectoryContainer* trajectoryContainer = evt->GetTrajectoryContainer();
+  G4int n_trajectories = 0;
+  if (trajectoryContainer) n_trajectories = trajectoryContainer->entries();
+  for(G4int iv=0;iv<n_trajectories;iv++)
+  {
+    trj=(Trajectory*)((*(evt->GetTrajectoryContainer()))[iv]);
+    Int_t parentID_ = (Int_t) trj->GetParentID();
+    //BS. the primary particles are added in oppisite order of what you would think. Also, added a storing cut on the decay mode in the PostUserTracking Action.
+	max=20;
+    if(nsaved_traj >= max )
+    {
+      G4cout<<"MAXIMUM NUMBER OF TRAJECTORIES PER EVENT REACHED, STOPPING EVENT"<<G4endl;
+      break;
+    }
+    //BS can add additional cuts here, though may be better to not store trajectories in the first place
+    else
+    {
+
+      EventAction::parentID[nsaved_traj] = trj->GetParentID();
+      EventAction::trackID[nsaved_traj] = trj->GetTrackID();
+      EventAction::mass[nsaved_traj] = trj->GetMass()/GeV;
+      EventAction::energy[nsaved_traj] = trj->GetEnergy()/GeV;
+      EventAction::vx[nsaved_traj] = (Double_t) ( trj->GetVertexPosition() ).getX()/cm;
+      EventAction::vy[nsaved_traj] = (Double_t) ( trj->GetVertexPosition() ).getY()/cm;
+      EventAction::vz[nsaved_traj] = (Double_t) ( trj->GetVertexPosition() ).getZ()/cm;
+
+      EventAction::px[nsaved_traj] = (Double_t) ( trj->GetInitialMomentum() ).getX()/GeV;
+      EventAction::py[nsaved_traj] = (Double_t) ( trj->GetInitialMomentum() ).getY()/GeV;
+      EventAction::pz[nsaved_traj] = (Double_t) ( trj->GetInitialMomentum() ).getZ()/GeV;
+
+      EventAction::nsaved_traj++;
+    };
+  };
+
+  pss->FillRandal(n_trajectories);
+
+  /////////////////////////////////////////////////
+
+  G4String colName;
+  G4SDManager * SDman = G4SDManager::GetSDMpointer();
+  collectionIDL = SDman->GetCollectionID(colName="FMSlargeColl");
+  collectionIDS = SDman->GetCollectionID(colName="FMSsmallColl");
+
+  G4HCofThisEvent* HCofEvent = evt->GetHCofThisEvent();
+  FMSlargeHitsCollection* myCollectionL = 0;
+  FMSsmallHitsCollection* myCollectionS = 0;
+  if(HCofEvent)
+  {
+    myCollectionL = (FMSlargeHitsCollection*)(HCofEvent->GetHC(collectionIDL));
+    myCollectionS = (FMSsmallHitsCollection*)(HCofEvent->GetHC(collectionIDS));
+  };
+
+  G4int nCer[1000];
+  G4double Esum,nCerenkov;
+  G4int dummy = nsaved_traj; //BS Temporary solution to make QT for individual photons from pi0 decay. However this method assumes that the trackID for these are the first ones after the primaries (fine for single pi0). Will need to develop better way later. Possibly creating tag for output and making list of ID #'s.
+
+  //pss->oy=(*myCollectionL)[1]->GetPos().x()/cm;
+  //pss->ox=(*myCollectionL)[1]->GetPos().y()/cm;
+
+    /* large cell action */
+    if(myCollectionL)
+    {
+      nhits=myCollectionL->entries();
+      G4cout<<"Try to Print" << nhits <<" Large Cell Hits"<<G4endl;
+      Esum=0; 
+      nCerenkov=0;
+      for(UInt_t jj=0;jj<nhits;jj++)
+      {
+	pss->isOpt=0;
+	if((*myCollectionL)[jj]->IsOptical())pss->isOpt=1;     
+	pss->isHit=0;
+	if((*myCollectionL)[jj]->IsHit())pss->isHit=1;
+
+	int jc=(*myCollectionL)[jj]->GetCellNb();
+	pss->nstb = cellgeo->GetNstb(jc,1);
+	pss->row = cellgeo->GetRow(jc,1);
+	pss->col = cellgeo->GetCol(jc,1);
+	pss->gain = cellgeo->GetGain(pss->nstb,pss->row,pss->col);
+	pss->corr = cellgeo->GetCorr(pss->nstb,pss->row,pss->col);
+	pss->en = (*myCollectionL)[jj]->GetEdep()/GeV;
+	pss->tot_en = (*myCollectionL)[jj]->GetTdep()/GeV;
+	pss->kin = (*myCollectionL)[jj]->GetKinE()/GeV;
+	if(pss->isOpt==1) nCer[jc]+=1;
+	Esum+=(*myCollectionL)[jj]->GetEdep()/GeV;
+	if(pss->isOpt==1)nCerenkov+=1;
+	pss->verx = (*myCollectionL)[jj]->GetPos().x()/cm;
+	pss->very = (*myCollectionL)[jj]->GetPos().y()/cm;
+	pss->verz = (*myCollectionL)[jj]->GetPos().z()/cm;
+	pss->px = (*myCollectionL)[jj]->GetMom().x();
+	pss->py = (*myCollectionL)[jj]->GetMom().y();
+	pss->pz = (*myCollectionL)[jj]->GetMom().z();
+	sprintf(pss->name,"%s",(*myCollectionL)[jj]->GetName().data());
+
+
+	pss->trNum = (*myCollectionL)[jj]->GetTrackNo();
+	pss->cosTh = (*myCollectionL)[jj]->GetCosTh();
+	pss->NCer = (*myCollectionL)[jj]->GetnCerenkov();
+	pss->gtime = (*myCollectionL)[jj]->GetGlobalTime()/ns;
+	pss->ltime = (*myCollectionL)[jj]->GetLocalTime()/ns;
+	pss->originalID = (*myCollectionL)[jj]->GetOriginalID();
+	pss->evnum = evnum_;
+	pss->photid =(*myCollectionL)[jj]->GetPhotonID();
+/*		std::cout<<std::endl;
+	for(int index=0;index<((*myCollectionL)[jj]->GetAncestors()).size();index++){
+		std::cout<<((*myCollectionL)[jj]->GetAncestors()).at(index)<<", ";
+	}
+		std::cout<<std::endl;
+*/
+	for(int index=0;index<((*myCollectionL)[jj]->GetAncestors()).size();index++){
+		if(index==0){
+		pss->FillMatrices(((*myCollectionL)[jj]->GetAncestors()).at(index),true);
+		}
+		else{
+		pss->FillMatrices(((*myCollectionL)[jj]->GetAncestors()).at(index),false);
+		}
+	}
+
+      };
+      G4cout<< "Esum=->"<<Esum<<" Ncerenkov="<<nCerenkov<<"("<<1.*nCerenkov/Esum<<" photons/GeV)"<<G4endl;
+
+    };
+
+    //pss->oy=(*myCollectionS)[1]->GetPos().x()/cm;
+    //pss->ox=(*myCollectionS)[1]->GetPos().y()/cm;
+
+    /* small cell action */
+    if(myCollectionS)
+    {
+      nhits=myCollectionS->entries();
+      G4cout<<"Try to Print " << nhits <<" Small Cell Hits"<<G4endl;
+      Esum=0; 
+      nCerenkov=0;
+      for(UInt_t jj=0;jj<nhits;jj++)
+      {
+	pss->isOpt = 0;
+	if((*myCollectionS)[jj]->IsOptical())pss->isOpt = 1;     
+	int jc=(*myCollectionS)[jj]->GetCellNb();
+	pss->isHit = 0;
+	if((*myCollectionS)[jj]->IsHit())pss->isHit = 1;
+
+	pss->nstb = cellgeo->GetNstb(jc,0);
+	pss->row = cellgeo->GetRow(jc,0);
+	pss->col = cellgeo->GetCol(jc,0);
+	pss->gain = cellgeo->GetGain(pss->nstb,pss->row,pss->col);
+	pss->corr = cellgeo->GetCorr(pss->nstb,pss->row,pss->col);
+	pss->en = (*myCollectionS)[jj]->GetEdep()/GeV;
+	pss->tot_en = (*myCollectionS)[jj]->GetTdep()/GeV;
+	pss->kin = (*myCollectionS)[jj]->GetKinE()/GeV;
+	if(pss->isOpt==1) nCer[jc]+=1;
+	Esum+=(*myCollectionS)[jj]->GetEdep()/GeV;
+	if(pss->isOpt==1)nCerenkov+=1;
+	pss->verx = (*myCollectionS)[jj]->GetPos().x()/cm;
+	pss->very = (*myCollectionS)[jj]->GetPos().y()/cm;
+	pss->verz = (*myCollectionS)[jj]->GetPos().z()/cm;
+	pss->px = (*myCollectionS)[jj]->GetMom().x();
+	pss->py = (*myCollectionS)[jj]->GetMom().y();
+	pss->pz = (*myCollectionS)[jj]->GetMom().z();
+	sprintf(pss->name,"%s",(*myCollectionS)[jj]->GetName().data());
+
+	pss->trNum = (*myCollectionS)[jj]->GetTrackNo();
+	pss->cosTh = (*myCollectionS)[jj]->GetCosTh();
+	pss->NCer = (*myCollectionS)[jj]->GetnCerenkov();
+	pss->gtime = (*myCollectionS)[jj]->GetGlobalTime()/ns;
+	pss->ltime = (*myCollectionS)[jj]->GetLocalTime()/ns;
+	pss->originalID = (*myCollectionS)[jj]->GetOriginalID();
+
+	pss->evnum = evnum_;
+	pss->photid =(*myCollectionS)[jj]->GetPhotonID();
+
+	for(int index=0;index<((*myCollectionS)[jj]->GetAncestors()).size();index++){
+		if(index==0){
+		pss->FillMatrices(((*myCollectionS)[jj]->GetAncestors()).at(index),true);
+		}
+		else{
+		pss->FillMatrices(((*myCollectionS)[jj]->GetAncestors()).at(index),false);
+		}
+	}
+	
+      };
+      G4cout<< "Esum=->"<<Esum<<" Ncerenkov="<<nCerenkov<<"("<<1.*nCerenkov/Esum<<" photons/GeV)"<<G4endl;
+    };
+
+
+    /*
+     *
+     */
+    // get HT and digitise; fill ttr & hsimu; then zero matrices
+    for(int k=0;k<=n_trajectories;k++){
+      pss->GetHT(k);
+      printf("HT (n%d,r%d,c%d)\n",pss->nstb_ht,pss->row_ht,pss->col_ht);
+      for(int n=0; n<4; n++){ pss->Digitise(n,k);}
+      
+      test.FillQT(pss->QTdata);
+      test.SetEvent(evnum_);
+      test.SetNQTdata(pss->nQTdata);
+      test.SetNPrimaries( (UInt_t) pss->nprimaries);
+      test.SetNStored( (UInt_t) dummy);
+      myvec.push_back (pss->nQTdata);
+      myvectest.push_back(test);
+      G4cout<<"THE nQTdata FOR TRAJECTORY "<<k<<" is "<<pss->nQTdata<<G4endl;
+    for(int ii=0; ii<pss->nQTdata;ii++){
+      G4cout<<(pss->QTdata)[ii]<<" QT at "<<ii<<G4endl;
+      }
+    }
+    //    G4cout<<"THE nQTdata FOR PRIMARY "<<primary<<" is "<<pss->nQTdata<<G4endl;
+    /*
+     *
+     */
+    
+  G4cout<<"THE NUMBER OF ENTRIES IN MYVEC IS " <<int (myvec.size())<<G4endl;
+  G4cout<<"THE ENTRIES OF MYVEC ARE";
+  for (UInt_t i=0; i<myvec.size(); i++) {G4cout<<" "<<myvec.at(i);
+  G4cout<<G4endl;}
+
+  pss->wicked_pickle(n_trajectories);
+
+  testtree->Fill();
+}
+
+
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

@@ -1,0 +1,42 @@
+#!/bin/bash
+# runs simulation for all found macro_*.mac files in macros
+
+job="shoot.bat"
+> $job
+
+echo "building batch file..."
+echo "Executable = /home/mposka/simulations/geant/bin/Linux-g++/simutesting" >> $job
+echo "Universe = vanilla" >> $job
+echo "notification = never" >> $job
+echo "getenv = True" >> $job
+echo '+Experiment = "star"' >> $job
+echo '+Job_Type = "cas"' >> $job
+#echo 'Requirements = Machine == "Heppellab16f"' >> $job
+echo "" >> $job
+
+log="logfiles"
+touch $lob/tmp
+rm $log/*
+count=1
+
+ls macros/macro*.mac > macrolist
+
+while read line; do
+  macfile=$line
+  echo "adding macro $macfile"
+  ofile=`echo $macfile | sed 's/macro/gFile/g;s/\.mac//g'`
+  echo "ofile is $ofile"
+  echo "Arguments = $macfile $ofile" >> $job
+  echo "Log = ${log}/Out${count}.log" >> $job
+  echo "Output = ${log}/Out${count}.out" >> $job
+  echo "Error = ${log}/Out${count}.err" >> $job
+  echo "Queue" >> $job
+  echo "" >> $job
+  let count++
+done < macrolist
+
+njobs=`cat macrolist | wc -l`
+rm macrolist
+echo "Submitting $njobs jobs to condor"
+condor_submit $job
+chmod -R a+rw logfiles/*

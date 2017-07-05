@@ -1,0 +1,19 @@
+#!/bin/bash
+# builds macros from argfile
+
+if [ $# -lt 1 ]; then
+  argfile="simgen/outgen/argfile_eventloop"
+else
+  argfile=$1
+fi
+
+echo "`cat $argfile | wc -l` lines to read"
+
+rm outroot/*.mac
+
+echo "building macros..."
+while read line; do
+  ./shoot-particle $line
+done < $argfile
+
+echo "macros built"
