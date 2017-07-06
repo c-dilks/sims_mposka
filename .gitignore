@@ -4,3 +4,4 @@ geant/fmsu/log/*
 geant/fmsu/logfiles/*
 geant/fmsu/gFiles/*
 analysis/*
+*.swp

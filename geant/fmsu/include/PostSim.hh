@@ -26,6 +26,8 @@ class PostSim
 		void Digitise(Int_t nstb_, int k);
 		void GetHT(int i);
 		void FillMatrixArray(int m, Int_t n[]);
+                void FillShowerShape(int i);
+                void GetCellCenter(int n0,int r0,int c0,Float_t &xcm0,Float_t &ycm0);
 
 		TCanvas * c1;
 		TH2F * hh[4];
@@ -160,6 +162,11 @@ class PostSim
 
 		Int_t Trig1[9], Trig2[9], Trig3[9], Trig4[9];
 		//////End BS
+
+
+                TH2F * shsh_edep[2][2]; // shower shape [0=large, 1=small] [0=horizontal, 1=vertical]
+                TH2F * shsh_ncer[2][2]; 
+
 
 
 	private:

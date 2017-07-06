@@ -14,6 +14,11 @@
 #include "G4Step.hh"
 #include <vector>
 
+namespace {
+  enum ls_enum {kL,kS}; // large/small
+  enum hv_enum {kH,kV}; // horiz/vert
+}
+
 PostSim::PostSim()
 {
 	MatrixArray.SetOwner((Bool_t) true);
@@ -76,6 +81,21 @@ PostSim::PostSim()
 	pnqtEnergyMod=&nqtEnergyMod;
 	pnqtRadDamage=&nqtRadDamage;
 
+        TString shshN,shshT;
+        for(int ls=0; ls<2; ls++) {
+          for(int hv=0; hv<2; hv++) {
+
+            shshN = Form("shshEdep%s%s",ls==kL?"L":"S",hv==kH?"H":"V");
+            shshT = Form("%s Cells %s E_{dep} Shower Shape;%s",
+              ls==kL?"Large":"Small",hv==kH?"Horizontal":"Vertical",hv==kH?"x_{c}":"y_{c}");
+            shsh_edep[ls][hv] = new TH2F(shshN.Data(),shshT.Data(),100,-5,5,100,0,1);
+
+            shshN = Form("shshNcer%s%s",ls==kL?"L":"S",hv==kH?"H":"V");
+            shshT = Form("%s Cells %s Cherenkov Shower Shape;%s",
+              ls==kL?"Large":"Small",hv==kH?"Horizontal":"Vertical",hv==kH?"x_{c}":"y_{c}");
+            shsh_ncer[ls][hv] = new TH2F(shshN.Data(),shshT.Data(),100,-5,5,100,0,1);
+          };
+        };
 }
 
 PostSim::~PostSim()
@@ -392,3 +412,92 @@ void PostSim::GetHT(int i)
 	};
 
 }
+
+
+// fill shower shape histos
+void PostSim::FillShowerShape(int i) {
+
+  // trabaja
+  // using "sedep" and "sncer"... is this correct? do we need to use sedep1? or sedepM?
+  TMatrix ** sedep = (TMatrix**) MatrixArray.At(1); 
+  TMatrix ** sncer = (TMatrix**) MatrixArray.At(4);
+
+  Float_t total_edep[2] = {0,0}; // [ls]
+  Float_t total_ncer[2] = {0,0};
+  Int_t rowmax[2] = {34,17};
+  Int_t colmax[2] = {24,12};
+  Int_t lsvar;
+  Float_t xcm,ycm,distx,disty;
+
+  Float_t a_edep,a_ncer;
+  Float_t frac_edep,frac_ncer;
+  Float_t phcoord; //trabaja -- need to get photon coord
+
+  // compute totals
+  for(int ns=0; ns<4; ns++) {
+    lsvar = ns<2 ? kL:kS;
+    for(int rs=0; rs<rowmax[lsvar]; rs++) {
+      for(int cs=0; cs<colmax[lsvar]; cs++) {
+        total_edep[lsvar] += (*(sedep[ns-1]))(rs,cs);
+        total_ncer[lsvar] += (*(sncer[ns-1]))(rs,cs);
+      };
+    };
+  };
+
+  // fill shower shape (for large XOR small cells, depening on which has HT)
+  for(int ns=0; ns<4; ns++) {
+    lsvar = ns<2 ? kL:kS;
+    if(lsvar == ((nstb_ht-1)<2 ? kL:kS)) {
+      for(int rs=0; rs<rowmax[lsvar]; rs++) {
+        for(int cs=0; cs<colmax[lsvar]; cs++) {
+
+          frac_edep = 0;
+          frac_ncer = 0;
+
+          if(total_edep[lsvar]>0) frac_edep = (*(sedep[ns-1]))(rs,cs) / total_edep[lsvar];
+          if(total_ncer[lsvar]>0) frac_ncer = (*(sncer[ns-1]))(rs,cs) / total_ncer[lsvar];
+
+          GetCellCenter(ns,rs,cs,xcm,ycm);
+          distx = xcm - phcoord;
+          disty = ycm - phcoord;
+
+          if(rs==row_ht) { 
+            if(frac_edep>0) shsh_edep[lsvar][kH]->Fill(distx,frac_edep);
+            if(frac_ncer>0) shsh_ncer[lsvar][kH]->Fill(distx,frac_ncer);
+          };
+
+          if(cs==col_ht) { 
+            if(frac_edep>0) shsh_edep[lsvar][kV]->Fill(disty,frac_edep);
+            if(frac_ncer>0) shsh_ncer[lsvar][kV]->Fill(disty,frac_ncer);
+          };
+        };
+      };
+    };
+  }; // eo fill shower shape loop
+
+
+  return;
+};
+
+
+void PostSim::GetCellCenter(int n0,int r0,int c0,Float_t &xcm0,Float_t &ycm0) {
+  switch(n0) {
+    case 0:
+      xcm0 = (c0+0.5) * 5.81;
+      ycm0 = (16.5-r0) * 5.81;
+      break;
+    case 1:
+      xcm0 = -(c0+0.5) * 5.81;
+      ycm0 =  (16.5-r0) * 5.81;
+      break;
+    case 2:
+      xcm0 = (c0+0.5) * 3.82;
+      ycm0 = (11.5-r0) * 3.82;
+      break;
+    case 3:
+      xcm0 = -(c0+0.5) * 3.82;
+      ycm0 =  (11.5-r0) * 3.82;
+      break;
+  };
+  return;
+};
