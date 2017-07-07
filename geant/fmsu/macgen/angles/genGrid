@@ -1,0 +1,125 @@
+#!/bin/bash
+# generate macros arranged in grid pattern in specified cell
+# incident energy is also varied
+
+#particle=gamma
+particle=pi+
+#particle=pi-
+
+nstb=3
+row=3
+col=8
+#nstb=1
+#row=4
+#col=5
+
+ndiv=11 # must be odd number
+
+energy_lb=5
+energy_ub=50
+energy_inc=5
+
+seq $energy_lb $energy_inc $energy_ub > enseq
+
+if [ $# -eq 3 ]; then
+  nstb=$1
+  row=$2
+  col=$3
+else
+  echo "using default coords"
+fi
+
+lspace=5.81
+sspace=3.82
+z=-31.1
+
+if [ $nstb -eq 1 ]; then
+  x=$(echo "-($col+0.5)*$lspace" | bc -l)
+  y=$(echo "(16.5-$row)*$lspace" | bc -l)
+  spc=$lspace
+elif [ $nstb -eq 2 ]; then
+  x=$(echo "($col+0.5)*$lspace" | bc -l)
+  y=$(echo "(16.5-$row)*$lspace" | bc -l)
+  spc=$lspace
+elif [ $nstb -eq 3 ]; then
+  x=$(echo "-($col+0.5)*$sspace" | bc -l)
+  y=$(echo "(11.5-$row)*$sspace" | bc -l)
+  spc=$sspace
+elif [ $nstb -eq 4 ]; then
+  x=$(echo "($col+0.5)*$sspace" | bc -l)
+  y=$(echo "(11.5-$row)*$sspace" | bc -l)
+  spc=$sspace
+else
+  echo "error: bad nstb"
+  exit
+fi
+
+echo "nstb=$nstb row=$row col=$col x=$x y=$y"
+
+let mm=$ndiv%2
+if [ $mm -ne 1 ]; then
+  echo "error: use odd number of divisions (ndiv)"
+  exit
+fi
+
+halfdiv=$(bc <<< "($ndiv-1)/2")
+rm -v macro*.mac
+
+def="def_macro.mac" # default macro
+defend="defend_macro.mac" # end of default macro
+> $def
+> $defend
+echo "/control/verbose 2" >> $def
+echo "/run/verbose 2" >> $def
+echo "/vis/disable" >> $def
+echo "/vis/drawVolume" >> $def
+echo "/vis/viewer/set/viewpointThetaPhi 90 180 deg" >> $def
+echo "/vis/viewer/zoom 1.4" >> $def
+echo "/vis/scene/add/trajectories smooth" >> $def
+#echo "/gun/position $x $y $z cm" >> $def
+echo "/gun/particle $particle" >> $defend
+echo "/gun/direction 0 0 1" >> $defend
+while read line; do
+  energy=$line
+  echo "/gun/energy $energy GeV" >> $defend
+  echo "/run/beamOn 10" >> $defend
+done < enseq
+echo "exit" >> $defend
+
+x_iter=1
+y_iter=1
+divspc=$(bc -l <<< "$spc/$ndiv")
+
+echo $x > xlist
+echo $y > ylist
+
+while [ $x_iter -le $halfdiv ]; do
+  xl=$(bc -l <<< "$x-$divspc*$x_iter")
+  xh=$(bc -l <<< "$x+$divspc*$x_iter")
+  echo $xl >> xlist
+  echo $xh >> xlist
+  let x_iter++
+done
+
+while [ $y_iter -le $halfdiv ]; do
+  yl=$(bc -l <<< "$y-$divspc*$y_iter")
+  yh=$(bc -l <<< "$y+$divspc*$y_iter")
+  echo $yl >> ylist
+  echo $yh >> ylist
+  let y_iter++
+done
+
+sort xlist -o xlist
+sort ylist -o ylist
+
+let mac_iter=1
+while read yvar; do
+  while read xvar; do
+    cat $def >> macro_$mac_iter.mac
+    echo "/gun/position $xvar $yvar $z cm" >> macro_$mac_iter.mac
+    cat $defend >> macro_$mac_iter.mac
+    let mac_iter++
+  done < xlist
+done < ylist
+
+#rm {x,y}list

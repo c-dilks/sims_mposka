@@ -209,6 +209,12 @@ G4cout<<"G4UI_USE IS DEFINED"<<G4endl;
 //  trackingaction->startphotonZ->Draw();
 //  c2->Print("Testing.pdf");
   evact->testtree->Write();
+  for(int ls=0; ls<2; ls++) {
+    for(int hv=0; hv<2; hv++) {
+      (evact->pss).shsh_edep[ls][hv]->Write();
+      (evact->pss).shsh_ncer[ls][hv]->Write();
+    };
+  };
   G4cout<<"TESTTREE WAS WRITTEN"<<G4endl;
 //  evact->PhotonWavelengthS->Write();
 //  evact->PhotonWavelengthL->Write();

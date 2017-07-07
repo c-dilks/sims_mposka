@@ -208,7 +208,16 @@ G4cout<<"G4UI_USE IS DEFINED"<<G4endl;
   TCanvas *c2 = new TCanvas("c2");
 //  trackingaction->startphotonZ->Draw();
 //  c2->Print("Testing.pdf");
+
   evact->testtree->Write();
+
+  for(int ls=0; ls<2; ls++) {
+    for(int hv=0; hv<2; hv++) {
+      (evact->pss).shsh_edep[ls][hv]->Write();
+      (evact->pss).shsh_ncer[ls][hv]->Write();
+    };
+  };
+
 //  evact->PhotonWavelengthS->Write();
 //  evact->PhotonWavelengthL->Write();
  // evact->OrigPhotonWavelengthS->Write();

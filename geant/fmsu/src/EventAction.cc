@@ -501,6 +501,11 @@ void EventAction::EndOfEventAction(const G4Event* evt)
 			pss.pz = (*myCollectionL)[jj]->GetMom().z();
 			sprintf(pss.name,"%s",(*myCollectionL)[jj]->GetName().data());
 
+                        //Matt
+                        pss.x_global=vx[0];
+                        pss.y_global=vy[0];
+                        //
+
 			/*Matt counting
 			for(int n=0; n<4; n++)
 			{
@@ -642,10 +647,10 @@ void EventAction::EndOfEventAction(const G4Event* evt)
                 //Matt
 			if(ShowerMaxOn && numhitsPS<nhits)
 			{
-				Double_t zMaxL = (*myCollectionL)[jj]->GetPos().z()/cm;
-				zMaxL += 15.5;
-				ShowerMaxArrayP[numhitsPS+numhitsPL]=zMaxL;
-				ShowerMaxHistP->Fill(zMaxL);
+				Double_t zMaxS = (*myCollectionS)[jj]->GetPos().z()/cm;
+				zMaxS += 15.5;
+				ShowerMaxArrayP[numhitsPS+numhitsPL]=zMaxS;
+				ShowerMaxHistP->Fill(zMaxS);
 				numhitsPS++;
 			};
             //
@@ -654,10 +659,10 @@ void EventAction::EndOfEventAction(const G4Event* evt)
                 //Matt
 			if(ShowerMaxOn && numhitsES<nhits)
 			{
-				Double_t zMaxL = (*myCollectionL)[jj]->GetPos().z()/cm;
-				zMaxL += 15.5;
-				ShowerMaxArrayE[numhitsES+numhitsEL]=zMaxL;
-				ShowerMaxHistE->Fill(zMaxL);
+				Double_t zMaxS = (*myCollectionS)[jj]->GetPos().z()/cm;
+				zMaxS += 15.5;
+				ShowerMaxArrayE[numhitsES+numhitsEL]=zMaxS;
+				ShowerMaxHistE->Fill(zMaxS);
 				numhitsES++;
 			};
             //
@@ -897,6 +902,8 @@ void EventAction::EndOfEventAction(const G4Event* evt)
 		CellGeo4Vec.push_back(CellGeo4G4QT);
 
 	}
+
+        pss.FillShowerShape();
 
 	testtree->Fill();
 

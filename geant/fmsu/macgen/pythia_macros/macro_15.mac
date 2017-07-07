@@ -1,0 +1,4013 @@
+/control/verbose 2
+/run/verbose 2
+/vis/disable
+#/vis/open HepRepFile
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 90 180 deg
+/vis/viewer/zoom 1.4
+/vis/scene/add/trajectories smooth
+# (if too many tracks cause core dump => /tracking/storeTrajectory 0)
+#/vis/scene/add/hits
+#/vis/scene/endOfEventAction accumulate
+/gun/position 0 0 -700. cm
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.026152 -0.177586 1.317586
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.106794 -0.092314 0.900989
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.247286 -0.225566 5.463459
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.004187 0.276860 1.762557
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.360932 -0.433279 6.230225
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.288280 -0.100849 2.831636
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.381336 0.414316 5.462373
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.031227 0.041702 0.670223
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.113643 0.180405 2.741548
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.166037 0.316350 5.585789
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.363778 0.483520 15.216951
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.112469 -0.036571 2.827153
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.036487 0.008865 0.533925
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.304885 -0.272488 4.477510
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.498684 0.104500 12.942933
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.452289 -0.055955 3.731152
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.058093 0.044395 0.530877
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.204311 0.218275 6.975034
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.010092 0.109372 1.718937
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.066243 -0.194813 1.530810
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.072246 0.183551 1.614890
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.009940 0.091893 0.719726
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.005807 -0.465110 4.905978
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.026869 -0.057191 0.581440
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.291923 -0.098302 5.844462
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.432212 0.381243 5.893342
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.148788 0.168981 5.506434
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.062547 -0.314073 6.024642
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.000749 0.142021 1.133251
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.131687 -0.150135 2.301859
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.029522 0.030910 0.548101
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.021108 -0.079706 0.524787
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.015850 0.316701 2.293499
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.153834 0.469935 3.057019
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.014463 -0.245178 4.279902
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.085775 -0.012206 1.742043
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.009275 0.128719 1.511395
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.046486 -0.051175 1.121773
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.141975 0.062587 0.991490
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.121989 0.521239 3.458803
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.005427 0.170258 3.438465
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.187152 -0.108515 2.858811
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.100923 0.039101 1.237571
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.062514 -0.002260 1.003083
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.124393 -0.245408 4.720218
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.094345 0.125388 3.694654
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.163297 0.410153 3.947784
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.072620 -0.269016 4.638480
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.381779 0.372053 13.860622
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.421941 -0.127727 8.256549
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.040245 -0.204569 1.681575
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.859948 -0.063491 5.279261
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.633143 -0.259877 5.329822
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.040699 0.293971 1.949323
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.047677 -0.018791 0.316806
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.016127 0.112625 0.850315
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.101663 0.073877 1.090348
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.250141 -0.231286 2.797670
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.008892 0.094590 1.073271
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.150635 0.374339 8.652533
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.530000 0.036926 5.592400
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.034252 0.047731 0.691472
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.051949 0.016239 0.423659
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.507887 0.066471 10.430173
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.269338 0.158535 2.602259
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.079510 0.336050 7.733990
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.294345 0.127383 2.183928
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.533920 0.001683 3.255635
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.236351 0.354078 4.392232
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.576787 -0.224467 3.980915
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.026940 0.246868 1.845271
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.603164 0.302889 11.412054
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.475388 -0.566848 13.197481
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.225944 -0.097623 2.204144
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.092313 0.003107 0.682590
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.202082 -0.021013 2.975022
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.100502 -0.006295 1.738183
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.338512 0.124514 3.407249
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.414061 0.139382 4.675536
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.151430 0.095242 1.187495
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.727350 -0.878334 18.751379
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.136046 0.538775 14.958536
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.255486 -0.114015 6.274447
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.067002 -0.251209 2.451586
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.058269 -0.050168 0.558244
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.239675 -0.353928 3.435702
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.096796 -0.035555 1.448721
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.219475 0.205476 2.511378
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.019417 -0.158818 1.522422
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.749830 0.063756 9.487778
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.155942 0.120686 5.367077
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.175678 0.055539 2.048656
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.104744 0.015440 0.890060
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.274845 0.049551 5.672045
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.722151 -0.191889 16.537743
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.041380 0.000539 0.463769
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.205676 0.293862 4.996210
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.172534 -0.064291 4.964859
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.010868 -0.108052 1.149006
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.516019 0.226883 8.766499
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.093816 0.094526 2.775616
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.245759 0.534571 10.036644
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.418543 0.049112 4.425560
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.108292 -0.002272 0.743309
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.059924 0.064306 1.388426
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.376058 -0.085221 5.499482
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.146742 -0.031191 1.714212
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.060743 0.092607 1.728034
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.067286 0.058410 0.822321
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.170410 -0.371993 4.577070
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.818067 0.121644 18.371674
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.107269 0.058026 2.226897
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.258207 0.343650 9.391873
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.781198 0.216872 8.538757
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.577925 0.454153 4.832623
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.508896 0.176111 4.479597
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.006001 -0.048952 0.894715
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.262384 -0.695112 9.301462
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.639640 1.143425 16.380114
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 1.167756 1.210592 25.468302
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.113337 0.274394 4.750635
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.115503 0.006350 1.781164
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.143725 -0.036586 1.228041
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.118227 -0.162334 2.170511
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.019891 -0.092874 0.680854
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.094506 -0.142731 3.120924
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.211882 0.326358 5.068082
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.534226 0.038113 7.740384
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.374980 -0.111078 4.509765
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.212133 -0.125424 2.215823
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.450332 -0.072770 6.268824
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.038338 -0.023477 0.399758
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.030655 -0.058188 0.412210
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.076134 -0.057174 0.792048
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.283902 0.258480 9.543582
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.164041 0.070032 2.570818
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.032284 -0.012975 0.251319
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.507439 0.326869 9.568221
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.021946 0.457316 2.799711
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.336419 -0.176490 2.621450
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.197039 -0.139166 2.406731
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.693347 0.398108 6.823891
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.028805 0.346081 6.948277
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.764321 -0.395854 11.265845
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.410466 0.017773 8.477302
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.009755 0.433320 8.462563
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.041487 -0.373050 5.059780
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.043838 0.017792 0.513727
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.252008 -0.028325 2.863336
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.458816 0.094868 4.179204
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.004389 0.050329 0.470917
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.322020 0.673110 12.753547
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.145422 0.118638 1.496195
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.145632 0.406673 6.071906
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.317081 -0.186107 3.047595
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.146090 -0.555063 10.107209
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.092916 0.223277 5.521851
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.127807 0.097225 1.157195
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.024127 0.203331 1.715775
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.217006 -0.251459 3.104206
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.156759 -0.367720 2.463298
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.641937 0.021675 4.459306
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.007576 0.168508 3.146446
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.145833 0.072834 1.157743
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.148624 0.024214 1.373026
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.099719 -0.007254 2.234914
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.046228 0.061444 0.497144
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.022641 -0.711419 7.535625
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.210393 -0.388185 2.802449
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.012739 0.118047 2.577826
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.106830 0.062369 1.397637
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.127582 0.098301 3.911823
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.120230 0.061925 2.221623
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.093496 -0.079210 1.307706
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.426152 -0.138785 6.953775
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.063285 -0.053468 1.221704
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.003404 -0.064624 0.559771
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.092607 -0.046035 2.631044
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.208669 -0.022974 1.283217
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.001621 0.046675 0.358916
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.419786 -0.019011 3.493371
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.005723 0.043165 0.670386
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.010722 -0.167547 3.793666
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.144428 0.036726 2.080028
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.365044 0.007214 3.522254
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.268340 -0.378136 3.344537
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.010855 0.064097 1.624624
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.100695 0.113814 3.769085
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.018687 -0.029630 0.305109
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.030359 0.114549 2.808408
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.078003 -0.265366 3.476340
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.278056 0.091747 2.049761
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.761796 -0.295097 12.014507
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.561505 -0.833255 24.146126
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.021081 -0.243203 5.594388
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.156993 0.257502 4.001179
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.518215 0.422527 13.227549
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -1.218598 0.646833 22.519171
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.178241 -0.129086 4.802827
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.018653 0.328677 2.940167
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.198629 -0.035562 1.362203
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.255461 -0.037020 2.896606
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.876063 -0.230018 21.421024
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.422841 0.210097 7.424058
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.097979 0.515727 13.654646
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.333910 -0.131431 4.626411
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.214691 -0.167378 2.111632
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.240635 0.076691 5.456678
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.530181 0.046504 3.946500
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.082605 0.086282 1.099408
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.062948 -0.012172 0.704566
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.175485 -0.121268 3.202886
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.014075 -0.308291 3.102684
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.127501 0.259372 7.498738
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.176703 0.267902 6.750800
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.295738 0.238222 2.800274
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.344902 -0.196250 2.901757
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.301969 -0.082534 2.521947
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.041761 -0.163809 3.381095
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.049388 -0.001098 0.322531
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.178495 -0.396738 9.620141
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.691786 -0.534755 8.323479
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.469407 -0.179584 13.662731
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.441749 0.024893 7.476156
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.939023 0.379722 7.772921
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.704624 -0.430702 6.334237
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.026297 -1.078592 7.470105
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.626509 -0.284699 5.305503
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.247092 0.199249 2.495547
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.284070 -0.147605 5.944932
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.164110 -0.481296 4.707504
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.533661 -0.280158 4.178323
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.473962 -0.171914 4.330886
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.393365 0.643329 18.600044
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.091279 -0.172736 4.695518
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.067038 -0.516868 8.567788
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.139395 -0.455701 5.451340
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.055731 -0.220995 2.958952
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.987545 0.281507 11.396839
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.046887 -0.172626 3.524725
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.090176 -0.519977 13.638112
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.040262 -0.174151 1.788226
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.262082 -0.040632 2.550772
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.409753 -0.261686 4.952759
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.055773 -0.351399 7.126121
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.367021 -0.183149 3.732911
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.279375 -0.067244 6.917532
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.204064 -0.563455 5.418936
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.273675 -0.061425 5.616602
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.106145 0.148222 4.646337
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.030098 -0.034656 0.569808
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.091944 -0.584538 8.171530
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.310517 -0.124343 2.242359
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.069072 0.197961 1.669773
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.265367 0.155535 2.210532
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.044145 -0.058872 0.565477
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.297264 -0.435622 6.447609
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.019761 -0.162207 1.349968
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.284140 -0.783449 13.428392
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.075207 -0.173348 1.512172
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.061033 0.009690 0.505928
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.198964 0.333283 5.061120
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.022915 0.074344 0.888135
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.174410 0.183232 2.390124
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.094717 0.047313 0.844207
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.409142 -0.723632 10.162503
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.151673 -0.463288 8.636508
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.256694 0.215827 6.420521
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.105412 -0.036364 2.214473
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.098208 0.305627 2.559125
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.069064 -0.344560 5.816233
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.009378 -0.060968 0.456542
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.315574 -0.332669 5.965829
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.076267 -0.083803 1.502456
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.104433 -0.046318 1.418741
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.296267 -0.361059 11.205052
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.881929 -0.551793 16.383581
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.115362 -0.378635 3.335897
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.149209 0.361793 3.012696
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.023844 -0.028765 0.600925
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.027859 0.409457 4.335411
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.080636 0.046773 1.588476
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.061359 0.020105 0.666489
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.028248 0.073459 0.680166
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.037624 -0.106090 2.905983
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.257062 0.009732 5.484747
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.329103 -0.851011 10.209915
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.128836 -0.060042 1.492060
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.104372 0.085401 1.177203
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.009141 0.099531 0.637414
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.227887 0.026399 1.995458
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.171959 -0.270211 2.395421
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.202821 0.324578 6.431315
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.161181 0.085180 2.527875
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.305366 0.928886 8.030792
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.192983 0.181808 2.655721
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.206658 0.145387 5.446659
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.272011 -0.240470 2.349723
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.518313 -0.606386 14.144048
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.017395 -0.304881 3.731019
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.155391 -0.144917 2.775336
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.665888 0.262941 7.431124
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.090156 -0.144386 1.146220
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.447346 0.117984 3.290559
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.182087 -0.017099 1.128058
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.123043 -0.021575 1.281856
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.063616 0.085945 0.803510
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.220991 -0.137568 4.866799
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.279151 -0.068454 3.978169
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.610841 0.239750 6.705348
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.188686 -0.023097 1.407553
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.775222 -0.177087 7.742688
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.136528 -0.460171 5.713355
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.383379 0.275029 7.558504
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.208898 -0.157967 5.156695
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.038449 0.070424 0.539129
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -1.042850 0.081036 9.874191
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.455818 -0.426280 6.152594
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.060971 0.189918 3.987739
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.009470 -0.073983 1.798501
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.291411 -0.077175 2.419010
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.077641 0.059250 1.404332
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.383613 -0.246309 5.335987
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.021028 -0.230739 4.928252
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.293923 0.167109 8.599394
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.011954 0.030840 0.512583
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.034965 -0.021420 0.815026
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.022115 -0.045198 1.149831
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.065252 0.421624 3.671249
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.042629 -0.093575 1.340395
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.409695 0.430694 12.652761
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.168112 0.013124 1.423628
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.096737 0.433534 4.768329
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.675653 0.255185 5.976166
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.457024 -0.125396 5.277607
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.702753 0.251697 16.318272
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.439158 0.071150 3.096522
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.152039 0.102758 2.598156
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.097613 -0.194293 2.853417
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.048176 0.172587 1.187707
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.053461 0.098721 0.869145
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.180430 0.008757 1.515160
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.059637 -0.245764 2.186986
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.125340 -0.286691 3.051599
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.323589 0.043928 2.642051
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.173565 -0.027302 2.773405
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.065535 -0.050313 0.792660
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.119267 -0.120434 1.617973
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.108702 -0.155141 2.287288
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.235875 -0.129674 3.037238
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.143368 0.335131 2.251772
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.624620 -0.132973 5.722193
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.198384 0.076748 4.028960
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.338114 -0.484864 14.924788
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.143985 -0.342400 4.532045
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.881745 0.620876 8.948503
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.325719 -0.279411 7.752372
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.087723 0.046193 2.310620
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.184509 0.274993 6.175091
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.097386 0.046808 0.673352
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.179751 0.073122 2.953943
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.028504 0.045523 0.832855
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.069219 -0.370797 3.091281
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.160753 0.373376 3.031346
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.075416 -0.189997 1.966001
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.383922 0.396324 5.342983
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.548931 -0.639573 6.401673
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.364189 -0.209003 5.107709
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.396743 -0.098411 2.769970
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.180101 -0.011057 3.429582
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.397574 0.611148 15.725259
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.253932 0.045399 4.835224
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.064775 -0.146630 2.205100
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.030307 -0.154597 0.985171
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.064178 0.308590 4.707347
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.312459 0.190319 5.873341
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.418014 0.142359 4.201574
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.046433 0.698758 11.562011
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.095600 0.136858 1.937066
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.728699 0.410682 8.133798
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.064108 -0.008938 0.529778
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.026228 0.135737 2.150872
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.096486 0.196762 3.768646
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.200727 -0.074840 1.938374
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.399515 0.195181 5.426139
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.105708 -0.168255 1.928264
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.434979 0.129801 12.120279
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.301050 0.041773 2.713019
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.041174 -0.018050 0.678539
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.063273 0.140560 1.088003
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.165826 -0.257492 3.801684
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.045285 0.071238 0.558851
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.101927 0.162728 3.234334
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.142926 -0.085682 2.147344
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.078164 -0.032300 1.102778
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.110198 0.095969 1.123220
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.031317 0.049221 1.221224
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.031674 -0.353887 4.358377
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.422535 -0.186777 4.728364
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.128233 -0.596351 3.972535
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.408223 0.100868 8.091531
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.363863 -0.019355 9.812325
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.034429 -0.173845 3.775877
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.046666 0.174048 2.381457
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.057064 -0.027968 1.414545
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.300739 -0.121933 7.540352
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.051301 -0.249363 4.302607
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.234657 0.072012 1.611189
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.032169 0.196979 4.845565
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.054326 -0.274640 2.151520
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.222962 0.251196 8.718381
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.108194 0.180421 2.374692
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.007987 -0.118462 2.621680
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.108490 0.016331 2.265184
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.020987 -0.194001 4.049850
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.111158 0.314982 3.105663
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.110944 0.292628 3.333573
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.058707 0.284346 2.461361
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.132525 -0.482289 4.229070
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.113537 0.040611 1.547499
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.274442 -0.255892 2.555198
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.249008 -0.487883 9.855704
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.333926 -0.085329 9.269228
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.139979 0.425374 5.689646
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.234497 -0.021366 1.666303
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.182608 0.106032 1.397924
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.172585 -0.034345 1.497046
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.707959 0.201032 12.019341
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.221954 -0.281709 6.006084
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.039422 -0.096347 1.156975
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.205068 -0.432467 4.328712
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.142954 -0.057423 2.317953
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.296477 0.087448 4.330303
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.116229 -0.045834 2.747386
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.092646 -0.047717 1.291683
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.029591 -0.175143 1.545257
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.011122 0.220647 1.735325
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.209133 0.014449 2.063624
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -1.360276 -0.768168 16.269081
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.275426 0.175950 2.260306
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.467074 0.238976 10.534538
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.007981 -0.436535 7.656750
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.051913 0.114292 1.071100
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.042391 0.179778 3.158540
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.927632 -0.038246 15.112840
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.146549 0.002005 2.601682
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.189221 -0.239870 7.362486
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.031453 0.109854 2.187635
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.035952 0.023193 0.879802
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.116758 -0.181774 1.523451
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.248813 0.592605 4.283140
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.473143 -0.227005 13.320791
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.003253 0.064486 1.009009
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.334300 -0.039648 3.882921
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.647916 -0.237735 16.247238
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.284107 0.415193 6.467701
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.126127 -0.042028 1.873934
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.016606 -0.067210 0.483522
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.421186 -0.511897 12.213906
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.077407 0.018899 1.996676
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.007635 0.062442 0.649424
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.305854 0.083763 2.690343
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.044835 0.266996 3.033737
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.969689 0.104826 6.104747
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.073169 0.016047 0.501080
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.061378 -0.125842 1.523498
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.238170 -0.548500 5.197457
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.031766 0.400356 6.662809
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.004403 0.110465 1.185450
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.653055 -0.419575 8.431973
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.262809 -0.137882 5.624035
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.020005 0.224533 1.670244
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.506324 0.077685 5.506769
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.103198 -0.278766 7.575285
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.100747 -0.040137 0.988180
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.115551 0.014847 1.946180
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.021247 0.177248 1.643577
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.304973 0.159350 7.986228
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.375309 -0.069354 2.897601
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.057238 0.077592 0.589248
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.117410 -0.289596 3.933136
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.112842 0.081798 1.795488
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.174161 0.550498 11.296635
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.072539 -0.024427 1.494125
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.128822 0.162281 3.694252
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.316671 -0.607619 9.788702
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.489313 0.111577 3.875211
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.124585 -0.341545 3.075715
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.074645 0.040355 0.680440
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.099491 -0.573924 3.725125
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.586415 0.260080 5.758341
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.520371 -0.906044 7.718637
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.111644 0.204574 3.454550
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.069320 0.199312 5.150681
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.150562 -0.278186 6.082790
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.046570 0.195838 5.307840
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.556774 0.287712 8.258291
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.304067 0.154780 3.464595
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.036642 0.033306 0.374264
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.101033 0.315103 3.063423
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.151116 -0.245540 7.059583
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.009920 -0.226089 1.600927
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.083197 0.242002 3.137647
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.031407 -0.133886 1.654787
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.413847 -0.251751 6.471238
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.239158 -0.049663 6.036043
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.066345 -0.042803 0.800819
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.121256 0.063626 1.231876
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.125337 -0.009305 0.910155
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.091611 0.368593 3.879572
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.599680 0.650711 10.917738
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.044489 -0.306252 2.466746
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.028551 -0.172382 1.528845
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.135132 -0.161610 1.308908
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.090317 0.059176 1.476075
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.158525 0.120650 3.022800
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.043551 -0.085325 1.776758
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.025768 -0.098775 2.084061
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.274723 0.608058 4.767641
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.211094 -0.380912 10.168061
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.423772 0.095350 6.159108
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.219329 -0.133180 1.618422
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.051128 -0.062774 0.784751
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.087081 0.035250 0.817700
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.241107 0.264740 2.863250
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.299323 -0.137801 5.149111
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.212219 -0.039219 4.622427
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.209831 0.168652 3.018134
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.710915 -0.242436 15.397946
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.014524 -0.228085 5.917113
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.797664 0.320594 9.772450
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.094380 0.104363 1.219438
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.191805 0.037015 1.189492
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -1.382428 0.568986 12.341003
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.301994 -0.188440 8.068210
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.222551 0.273856 4.384452
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.053222 -0.043948 0.545462
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.407834 -0.054383 3.988743
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.159980 0.113468 2.499540
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.327001 0.244267 2.645569
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.553766 -1.118162 24.431129
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.420557 0.014111 4.347725
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.055324 -0.331023 7.217389
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.056103 -0.040250 0.419254
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.185114 -0.233074 5.000630
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.184241 0.584221 8.949180
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.407346 0.036304 11.142689
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.261890 0.386609 9.420151
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.087219 0.082977 2.063632
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.083561 0.179014 4.860240
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.450278 0.365960 8.059519
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.423353 0.024824 6.877779
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.017795 -0.451696 5.421673
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.030753 0.275972 5.017186
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.227354 0.094497 5.096478
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.175415 -0.302094 2.862382
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.076093 -0.079855 2.037707
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.161949 -0.014174 1.092044
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.106954 0.272815 6.167215
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.067772 -0.212839 1.700066
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.623190 -0.365496 12.217647
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.262670 -0.310146 6.634681
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.015724 -0.294049 4.268619
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.082150 0.066043 0.719146
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.125053 -0.202363 2.077476
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.566037 -0.492425 15.201199
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.147282 -0.258457 2.585659
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.111116 -0.148611 1.160963
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.367631 0.351498 11.877312
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.054339 0.007202 0.589364
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.249508 0.012553 4.173468
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.124425 -0.601205 4.986238
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.185845 -0.151209 2.533786
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.038026 -0.233558 3.050033
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.329002 0.009703 3.871674
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.333338 -0.009673 3.234584
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 1.020341 0.329816 6.976663
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.033624 -0.120861 3.070079
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.147055 -0.456034 3.392385
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.445202 0.236676 7.318889
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.139618 -0.578882 4.506611
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.007040 0.263449 4.353877
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.249029 0.150387 4.676924
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.064373 -0.031446 1.451595
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.155741 -0.305851 2.138460
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.194818 -0.405691 3.606169
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.064526 0.247083 4.630836
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.120143 0.124079 1.466488
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.121777 -0.108456 1.814472
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.481403 -0.081761 3.526379
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.151394 0.121596 4.189504
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.370394 0.100031 8.217232
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.237667 -0.531936 5.695569
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.208696 0.000335 1.278361
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.382714 0.172360 7.600961
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.152242 -0.207142 3.047959
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.053660 0.127922 2.485010
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.073247 0.078129 1.992666
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.122982 -0.319593 3.486141
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.269826 0.267540 2.731587
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.276637 -0.226545 6.684717
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.035542 -0.351507 8.568278
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.002744 0.390888 9.600684
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.209157 -0.142436 2.162614
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.165038 0.063220 2.769757
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.165224 -0.195158 3.296396
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.148566 0.132599 1.956704
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.071396 0.266854 2.521085
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.793033 -0.002107 5.369015
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.131716 0.463803 3.652662
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.046731 -0.142971 2.103867
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.013534 0.281409 1.954131
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.016215 -0.014386 0.256112
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.237559 -0.373008 4.176570
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.252399 -0.196649 2.108850
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.077192 -0.046965 0.843972
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.442129 0.982670 20.600237
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.066455 -0.114263 1.269454
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.040760 -0.033115 0.533384
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.352057 -0.440392 7.624923
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.280864 0.272626 6.635988
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.280864 -0.272626 2.754116
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.019066 0.085571 0.708494
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.520242 -0.069532 6.635273
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.021226 0.054832 1.069942
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.509671 -0.032496 6.742345
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.134599 -1.169820 12.908448
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.111599 0.384799 5.156450
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.118064 -0.024410 0.930873
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.025455 -0.269755 1.933081
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -1.250030 0.831207 10.699844
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.065929 -0.346364 7.306123
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.380134 -0.221752 9.206333
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.027757 0.161293 1.733524
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.043340 0.004067 0.499602
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.042889 -0.460105 4.925448
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.040095 -0.025687 1.002837
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.101032 0.292922 6.841751
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.090687 0.503858 3.339079
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.277736 0.201658 7.052538
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.227336 -0.122655 3.025697
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.079508 -0.124666 2.642813
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.167458 0.695813 6.665175
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.021575 -0.017400 0.294660
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.158618 -0.032905 1.318862
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.070442 -0.255375 1.894820
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.109732 -0.097099 1.987203
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.175473 0.529532 10.483577
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.135317 0.179131 5.899086
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.040330 0.086947 0.820163
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.000694 -0.407144 8.692473
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.068016 0.041840 0.906397
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.092440 -0.249997 6.168870
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.244554 0.072686 4.904327
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.152099 0.093774 1.883915
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.050129 -0.005882 0.629802
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.125182 0.399986 2.916907
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.139406 0.363772 2.414464
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.153378 -0.108601 1.175649
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.627263 -0.913039 28.256920
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.209295 0.041214 4.185421
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.480189 -0.120559 10.358053
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.086813 0.139578 1.735223
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.097051 -0.146185 2.545575
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.090041 -0.118194 0.945319
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.581810 -1.531115 44.116688
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -2.301875 0.641262 21.660967
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.193082 -0.246828 3.510320
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.513528 -0.199849 9.878404
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.288898 0.023152 4.810128
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.371762 -0.234361 4.883270
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.560429 -0.403927 7.171462
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.246562 -0.046680 1.933464
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.040758 0.048811 0.554770
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.073753 -0.034292 0.779989
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.058675 0.008971 0.384341
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.409200 -0.124784 6.564694
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.037273 0.324626 2.617371
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.144249 0.272413 3.069033
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.038017 0.103774 2.192693
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.202035 -0.065135 2.363628
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.060522 0.313328 3.481923
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.150983 0.035312 1.248027
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.276131 -0.433659 5.958852
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.068656 0.079157 1.405851
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.031572 -0.117172 2.894090
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.100369 -0.005587 1.361774
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.227955 -0.178440 2.084764
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.053530 0.131459 0.864450
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.138095 0.040437 3.661172
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.253428 -0.042031 6.000621
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.026728 0.057135 0.643425
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.128318 -0.233581 3.216128
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.527982 0.268685 5.374566
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.037834 -0.019808 0.595847
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.061349 -0.151962 3.047510
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -1.401338 1.232400 17.928993
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.076639 0.232121 3.773204
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.133688 -0.230720 1.812177
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.001544 -0.164872 2.198753
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.048040 0.007332 0.842732
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.337250 -0.123599 2.281354
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.246323 -0.322103 3.016526
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.185608 0.228188 6.750126
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.522533 -0.053434 4.747898
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.628900 -0.105504 7.073129
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.438063 -0.622400 4.668409
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.467699 0.175544 3.163138
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.105222 0.033535 2.581650
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.133830 -0.400687 5.327196
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.354491 0.168971 3.799717
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.521857 0.165754 4.163874
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.038077 0.037202 1.089649
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.087155 0.065709 1.790277
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.143680 -0.199309 1.510552
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.508685 -0.255237 7.553993
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.033072 -0.002639 0.265286
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.219036 -0.044776 3.360836
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.345155 -0.091948 2.790320
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.003701 0.254397 1.602096
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.078731 0.380411 2.985879
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.269040 -0.140832 6.574828
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.369484 -0.093189 4.251006
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.001284 -0.321804 8.600332
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.305200 0.211189 5.965158
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.138052 -0.168325 4.241868
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.000785 0.025549 0.436083
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.089924 -0.175070 4.550028
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.037515 0.074434 0.694382
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.332824 -0.337519 4.761005
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.153006 0.371122 4.370511
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.537637 -0.382134 9.354589
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.250545 0.519560 4.086689
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.064181 0.222181 2.996811
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.080182 0.039586 1.866987
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.051799 -0.026539 1.448972
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.117955 -0.157431 1.683637
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.297343 -0.430192 5.180373
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.202408 0.481897 3.404173
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.072937 -0.097231 1.313782
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.463470 0.242382 4.725660
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.001470 0.094415 1.690021
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.278544 0.045391 7.062277
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.410714 -0.426003 8.754670
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.311607 -0.140343 5.242785
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.000978 -0.189647 2.171983
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.028618 0.152731 1.078354
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.164496 -0.459941 4.016410
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.396711 0.077949 4.476817
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.106306 0.456413 7.971336
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.144639 -0.102373 1.152615
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.212222 0.160221 4.936435
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.112678 0.222694 5.226883
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.125643 0.282232 2.270972
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.162692 -0.195993 4.767169
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.161406 -0.107690 1.770583
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.511025 -0.040674 5.161357
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.298526 0.086872 2.916127
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.001710 -0.246888 3.718794
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.100604 0.067891 1.492781
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.252378 -0.294000 5.444117
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.091192 0.166598 3.594347
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.169702 -0.052913 1.698715
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.134827 -0.455578 8.832617
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.050716 -0.251211 4.696856
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.330306 -0.795679 18.540239
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.325489 -0.009447 2.411322
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.008882 -0.359626 6.529488
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.717184 -0.007728 6.831298
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.424730 0.287002 4.968836
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.366666 0.292438 2.937421
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.138155 0.063113 1.928003
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.062212 0.056258 0.601794
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.190571 0.072640 4.515932
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.142586 0.199342 3.608687
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.825646 0.399235 11.016583
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.220963 -0.396099 2.926189
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.262993 -0.145031 7.053995
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.042820 -0.086856 1.172216
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.161914 0.089171 1.421372
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.794364 -0.515839 13.830310
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.084627 0.240381 4.735103
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.096878 0.009407 0.654956
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.079888 -0.226916 2.331116
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.081976 0.155275 1.767234
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.061940 0.120208 0.864528
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.150441 -0.043528 3.694206
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.741276 0.767196 11.638695
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.429199 -0.582874 4.492548
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.028903 -0.173192 2.255804
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.000270 0.076265 1.880817
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.082415 -0.089586 1.201379
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.011924 0.051633 0.699367
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.383046 0.108427 2.448526
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.008214 -0.019420 0.332205
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.341345 0.092007 4.968874
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.047316 0.132780 1.438332
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.272825 0.163476 7.003276
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.056336 -0.189176 2.095325
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.152453 0.099147 1.105281
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.360854 0.214275 4.438034
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.235209 0.210919 6.123176
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.258837 0.818473 17.606153
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.027813 -0.118110 1.837931
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.053015 0.019158 1.480641
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.741496 -0.081865 6.057195
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.064977 0.048417 0.531830
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.444401 0.178164 6.115309
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.192625 0.284062 8.039849
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.076728 -0.062927 0.649967
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.022129 0.306463 2.088103
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.001840 -0.078156 0.820543
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.583719 -0.582149 10.468628
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.130370 -0.300486 2.456488
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.307968 0.104752 2.699041
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.044500 -0.051183 0.510320
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.173453 0.070073 2.165178
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.373496 -0.466767 10.043870
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.134459 -0.170364 1.691773
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.046291 0.145955 3.822514
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.244169 -0.072243 1.550269
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.051777 0.019573 0.576765
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.202973 -0.513583 3.702032
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.023253 0.127804 3.196690
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.264017 0.412950 8.449990
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.417562 0.148373 3.337492
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.106261 0.058999 2.069198
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.053049 0.033473 0.652507
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.092166 -0.029615 1.040848
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.066922 -0.037396 1.966902
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.165335 -0.010248 1.154520
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.028611 0.102447 0.853133
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.020856 0.081653 0.950367
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.645215 -0.282716 4.761984
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.229408 -0.171688 2.271745
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.061226 -0.042667 1.409287
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.295608 -0.153957 2.158067
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.042633 0.280867 2.672388
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.384678 -0.408863 10.325436
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.251288 0.008078 3.594865
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.102675 -0.179881 1.287388
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.113514 0.073091 1.691985
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.238237 0.182336 4.280213
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.025938 0.207446 2.509209
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.120252 0.065464 1.945497
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.733858 -0.083035 4.607008
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.053085 -0.084181 1.354112
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.019750 0.140844 1.490913
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.102657 0.176217 2.194550
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.119848 -0.498793 4.835451
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.253104 0.254943 4.665372
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.156943 -0.119014 1.720886
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.062154 -0.284205 7.425562
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.140184 0.120013 2.823301
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.173525 0.183039 2.943285
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.183053 0.503170 4.130143
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.203966 0.201161 3.730612
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.198552 0.194672 2.469167
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.038782 -0.127053 1.108580
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.227933 0.585445 5.455113
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.019570 0.042719 1.150754
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.000387 -0.168226 2.591719
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.353153 0.461761 5.783705
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.163627 -0.394796 4.301719
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.783000 0.382975 12.804889
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.028066 0.066166 0.666975
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.338075 -0.168694 6.766514
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.050210 -0.196214 5.265749
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.689645 0.059757 18.698500
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.323611 -0.317172 5.645308
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.035697 -0.026500 0.288573
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.147045 -0.410924 4.034204
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.281472 0.167912 2.581979
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.728823 -0.713440 11.797269
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.300474 0.279321 7.482070
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.141556 -0.181234 5.745581
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.074654 -0.503868 3.320935
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.485077 -0.588769 6.656300
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.018592 0.000637 0.186021
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.288251 0.024038 2.814378
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.118079 0.020531 2.293367
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.205825 0.191791 3.861408
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.289032 -0.279481 7.438410
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.312496 0.965623 7.855176
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.033233 -0.020301 0.966537
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.165785 -0.116497 1.785075
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.356608 -0.028610 8.779402
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.451828 0.197804 12.037399
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.159289 0.113841 1.232197
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.196109 -0.436186 5.451700
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.006409 0.013756 0.105024
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.060142 0.090718 0.835461
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.381984 0.497855 6.512736
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.043200 -0.023424 0.500805
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.128385 0.281959 6.682118
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.541885 -0.396131 6.455648
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.496281 -0.545900 4.782144
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.074881 -0.038353 0.950310
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.473482 0.254378 3.320021
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.114902 -0.203558 2.572126
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.137474 0.054066 2.393701
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.092700 0.572076 9.609090
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -1.071401 0.625608 19.108114
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.234635 -0.108051 6.910746
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.144899 0.458366 3.523267
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.637534 -0.180846 6.161397
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.196255 0.199144 5.006797
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.072116 -0.117202 0.845254
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.038010 -0.230568 3.507886
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.068854 -0.406473 3.375965
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.308008 -0.088078 3.844487
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.007436 -0.009161 0.080605
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.362469 -0.215100 5.611394
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.057614 0.048909 1.064548
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.199691 0.295875 6.355912
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.465985 0.213271 11.816074
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.652886 0.226092 5.381433
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.085346 0.109543 2.141099
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.146706 0.437992 8.044585
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.007927 -0.128876 2.263829
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.374223 0.065858 3.742793
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.280491 0.079497 2.857565
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.100888 -0.129105 1.082118
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.946501 -0.077649 9.841473
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.100677 0.108861 1.707220
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.317599 0.136248 2.267798
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.084642 0.005468 0.862801
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum -0.107704 -0.456968 4.544765
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.120845 -0.098994 1.224709
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.193766 0.144173 2.487224
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.043563 -0.006534 0.593635
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.011494 -0.011204 0.247758
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.117810 -0.145847 2.112761
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.703134 -0.473932 6.622139
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.328035 -0.176930 2.293225
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.006216 -0.216499 1.319068
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.248614 0.278741 3.079440
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.155903 0.276747 4.130449
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.374359 0.129241 6.932811
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.209135 0.029696 2.546600
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.357453 0.439693 3.496968
+/run/beamOn 1
+/gun/particle gamma
+/gun/direction 0 0 1
+/gun/momentum 0.097176 0.029009 1.377432
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.008306 0.118249 0.887816
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.001609 0.096577 1.948961
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.129520 -0.216316 3.753802
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.051229 0.166875 1.652558
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.046491 0.043829 0.548697
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.571233 0.419615 8.398634
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.117735 0.163130 4.361037
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.017712 0.638374 15.400338
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.469529 0.170944 5.453267
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.029565 0.299393 3.508096
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.051987 0.087536 2.533094
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.181079 -0.262073 4.863225
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.044297 -0.451126 7.225495
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.160933 -0.141996 3.645276
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.161343 0.832358 11.595314
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.008541 -0.124863 2.444625
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.135606 -0.007954 3.638907
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.255092 -0.183503 5.877088
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.195026 -0.106057 1.440301
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.274099 0.075838 2.721076
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.018200 -0.080618 1.160627
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.161480 0.112610 1.399510
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.246232 -0.044271 1.528682
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.038393 0.266270 1.647728
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.087125 0.054583 0.974435
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.246476 0.182752 3.620046
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.085771 -0.091435 2.777609
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.182026 0.222148 2.419638
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.185540 -0.046713 3.251478
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.374436 -0.234445 3.956699
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.453074 -0.636849 5.771611
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.499438 -0.353015 3.809344
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.388208 -0.050057 2.449201
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.330453 0.054434 4.824086
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.425643 0.776615 20.151001
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.177356 0.087620 3.502445
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.337255 -0.078179 8.385056
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.226015 -0.097447 4.574382
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.392726 -0.756002 16.444954
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.232882 0.082563 4.887120
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.405976 0.443336 15.850113
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.269768 -0.062194 5.394574
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.105566 -0.393410 9.600344
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.329894 -0.076771 4.905010
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.006525 -0.419479 5.034372
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.575206 -0.208531 10.149960
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.430995 -0.050084 3.579870
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.014749 0.208451 3.277927
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.799560 -0.231310 5.415322
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.099910 -0.022169 2.304412
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.598134 -0.118692 5.333203
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum 0.248085 0.419657 7.412695
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum 0.366141 -0.277796 8.468279
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum 0.174354 0.243641 3.349048
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.077993 -0.055849 1.437021
+/run/beamOn 1
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/momentum -0.210377 0.317241 3.559374
+/run/beamOn 1
+/gun/particle pi0
+/gun/direction 0 0 1
+/gun/momentum -0.015932 0.541075 4.380555
+/run/beamOn 1
+/gun/particle pi-
+/gun/direction 0 0 1
+/gun/momentum -0.003369 0.174349 2.179033
+/run/beamOn 1
+exit

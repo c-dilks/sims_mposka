@@ -42,6 +42,8 @@ PostSim::PostSim()
 	py=0;
 	pz=0;
 	//Matt
+        x_global=0; 
+        y_global=0;
 	ShowerMaxLarge=0;
 	ShowerMaxSmall=0;
 	//	
@@ -415,31 +417,43 @@ void PostSim::GetHT(int i)
 
 
 // fill shower shape histos
-void PostSim::FillShowerShape(int i) {
+void PostSim::FillShowerShape() {
+
+  printf("\n\n\n>>> aqui comienza FillShowerShape <<< \n\n");
 
   // trabaja
   // using "sedep" and "sncer"... is this correct? do we need to use sedep1? or sedepM?
   TMatrix ** sedep = (TMatrix**) MatrixArray.At(1); 
   TMatrix ** sncer = (TMatrix**) MatrixArray.At(4);
 
+
+  for(int ns=0; ns<4; ns++) {
+    printf(">>> sedep %d @ %p dim=%dx%d\n",ns,(void*)sedep[ns],sedep[ns]->GetNrows(),sedep[ns]->GetNcols());
+    //sedep[ns-1]->Print();
+    printf(">>> sncer %d @ %p dim=%dx%d\n",ns,(void*)sncer[ns],sedep[ns]->GetNrows(),sedep[ns]->GetNcols());
+    //sncer[ns-1]->Print();
+  };
+
+  printf("HT: nstb_ht=%d row_ht=%d col_ht=%d\n",nstb_ht,row_ht,col_ht);
+  printf("x_global=%f y_global=%f\n",x_global,y_global);
+
   Float_t total_edep[2] = {0,0}; // [ls]
   Float_t total_ncer[2] = {0,0};
-  Int_t rowmax[2] = {34,17};
-  Int_t colmax[2] = {24,12};
+  Int_t rowmax[2] = {34,24};
+  Int_t colmax[2] = {17,12};
   Int_t lsvar;
   Float_t xcm,ycm,distx,disty;
 
   Float_t a_edep,a_ncer;
   Float_t frac_edep,frac_ncer;
-  Float_t phcoord; //trabaja -- need to get photon coord
 
   // compute totals
   for(int ns=0; ns<4; ns++) {
     lsvar = ns<2 ? kL:kS;
     for(int rs=0; rs<rowmax[lsvar]; rs++) {
       for(int cs=0; cs<colmax[lsvar]; cs++) {
-        total_edep[lsvar] += (*(sedep[ns-1]))(rs,cs);
-        total_ncer[lsvar] += (*(sncer[ns-1]))(rs,cs);
+        total_edep[lsvar] += (*(sedep[ns]))(rs,cs);
+        total_ncer[lsvar] += (*(sncer[ns]))(rs,cs);
       };
     };
   };
@@ -454,19 +468,22 @@ void PostSim::FillShowerShape(int i) {
           frac_edep = 0;
           frac_ncer = 0;
 
-          if(total_edep[lsvar]>0) frac_edep = (*(sedep[ns-1]))(rs,cs) / total_edep[lsvar];
-          if(total_ncer[lsvar]>0) frac_ncer = (*(sncer[ns-1]))(rs,cs) / total_ncer[lsvar];
+          if(total_edep[lsvar]>0) frac_edep = (*(sedep[ns]))(rs,cs) / total_edep[lsvar];
+          if(total_ncer[lsvar]>0) frac_ncer = (*(sncer[ns]))(rs,cs) / total_ncer[lsvar];
 
           GetCellCenter(ns,rs,cs,xcm,ycm);
-          distx = xcm - phcoord;
-          disty = ycm - phcoord;
+          distx = xcm - x_global;
+          disty = ycm - y_global;
 
+          printf("ns=%d rs=%d cs=%d\n",ns,rs,cs);
           if(rs==row_ht) { 
+            printf("  rs=%d distx=%f frac_edep=%f\n",rs,distx,frac_edep);
             if(frac_edep>0) shsh_edep[lsvar][kH]->Fill(distx,frac_edep);
             if(frac_ncer>0) shsh_ncer[lsvar][kH]->Fill(distx,frac_ncer);
           };
 
           if(cs==col_ht) { 
+            printf("  cs=%d disty=%f frac_edep=%f\n",cs,disty,frac_edep);
             if(frac_edep>0) shsh_edep[lsvar][kV]->Fill(disty,frac_edep);
             if(frac_ncer>0) shsh_ncer[lsvar][kV]->Fill(disty,frac_ncer);
           };
@@ -474,6 +491,8 @@ void PostSim::FillShowerShape(int i) {
       };
     };
   }; // eo fill shower shape loop
+
+  printf(">>> FillShowerShape hecho\n");
 
 
   return;
@@ -483,19 +502,19 @@ void PostSim::FillShowerShape(int i) {
 void PostSim::GetCellCenter(int n0,int r0,int c0,Float_t &xcm0,Float_t &ycm0) {
   switch(n0) {
     case 0:
-      xcm0 = (c0+0.5) * 5.81;
-      ycm0 = (16.5-r0) * 5.81;
-      break;
-    case 1:
       xcm0 = -(c0+0.5) * 5.81;
       ycm0 =  (16.5-r0) * 5.81;
       break;
+    case 1:
+      xcm0 =  (c0+0.5) * 5.81;
+      ycm0 =  (16.5-r0) * 5.81;
+      break;
     case 2:
-      xcm0 = (c0+0.5) * 3.82;
-      ycm0 = (11.5-r0) * 3.82;
+      xcm0 = -(c0+0.5) * 3.82;
+      ycm0 =  (11.5-r0) * 3.82;
       break;
     case 3:
-      xcm0 = -(c0+0.5) * 3.82;
+      xcm0 =  (c0+0.5) * 3.82;
       ycm0 =  (11.5-r0) * 3.82;
       break;
   };

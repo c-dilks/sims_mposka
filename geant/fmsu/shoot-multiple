@@ -5,7 +5,7 @@ job="shoot.bat"
 > $job
 
 echo "building batch file..."
-echo "Executable = /home/mposka/simulations/geant/bin/Linux-g++/simutesting" >> $job
+echo "Executable = ${SIMHOME}/geant/bin/Linux-g++/simutesting" >> $job
 echo "Universe = vanilla" >> $job
 echo "notification = never" >> $job
 echo "getenv = True" >> $job
@@ -39,4 +39,4 @@ njobs=`cat macrolist | wc -l`
 rm macrolist
 echo "Submitting $njobs jobs to condor"
 condor_submit $job
-chmod -R a+rw logfiles/*
+#chmod -R a+rw logfiles/*

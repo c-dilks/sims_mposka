@@ -1,0 +1,12 @@
+#!/bin/bash
+# test script
+
+pre=0
+while read line; do
+  cur=$line
+  dif=$(bc -l <<< "($cur)-($pre)")
+  echo $dif
+  pre=$cur
+done < ylist
+
+

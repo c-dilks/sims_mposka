@@ -26,7 +26,7 @@ class PostSim
 		void Digitise(Int_t nstb_, int k);
 		void GetHT(int i);
 		void FillMatrixArray(int m, Int_t n[]);
-                void FillShowerShape(int i);
+                void FillShowerShape();
                 void GetCellCenter(int n0,int r0,int c0,Float_t &xcm0,Float_t &ycm0);
 
 		TCanvas * c1;
@@ -73,6 +73,8 @@ class PostSim
 		//Matt
 		float ShowerMaxLarge;
 		float ShowerMaxSmall;
+                float x_global;
+                float y_global;
 		//	
 
 		TObjArray MatrixArray;

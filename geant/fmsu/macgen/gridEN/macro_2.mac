@@ -1,0 +1,31 @@
+/control/verbose 2
+/run/verbose 2
+/vis/disable
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 90 180 deg
+/vis/viewer/zoom 1.4
+/vis/scene/add/trajectories smooth
+/gun/position -31.08090909090909090912 30.73363636363636363640 -31.1 cm
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/energy 5 GeV
+/run/beamOn 1
+/gun/energy 10 GeV
+/run/beamOn 1
+/gun/energy 15 GeV
+/run/beamOn 1
+/gun/energy 20 GeV
+/run/beamOn 1
+/gun/energy 25 GeV
+/run/beamOn 1
+/gun/energy 30 GeV
+/run/beamOn 1
+/gun/energy 35 GeV
+/run/beamOn 1
+/gun/energy 40 GeV
+/run/beamOn 1
+/gun/energy 45 GeV
+/run/beamOn 1
+/gun/energy 50 GeV
+/run/beamOn 1
+exit

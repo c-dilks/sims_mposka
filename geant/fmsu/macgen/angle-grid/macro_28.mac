@@ -1,0 +1,109 @@
+/control/verbose 2
+/run/verbose 2
+/vis/disable
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 90 180 deg
+/vis/viewer/zoom 1.4
+/vis/scene/add/trajectories smooth
+/gun/particle pi+
+/gun/energy 30 GeV
+/gun/position -32.470 31.42818181818181818184 -31.1 cm
+/gun/direction 0 0 1
+/run/beamOn 1
+/gun/direction 0.030009 0.000000 1.000000
+/run/beamOn 1
+/gun/direction 0.025989 0.015004 1.000000
+/run/beamOn 1
+/gun/direction 0.015005 0.025989 1.000000
+/run/beamOn 1
+/gun/direction 0.000000 0.030009 1.000000
+/run/beamOn 1
+/gun/direction -0.015004 0.025989 1.000000
+/run/beamOn 1
+/gun/direction -0.025989 0.015005 1.000000
+/run/beamOn 1
+/gun/direction -0.030009 0.000000 1.000000
+/run/beamOn 1
+/gun/direction -0.025989 -0.015004 1.000000
+/run/beamOn 1
+/gun/direction -0.015005 -0.025989 1.000000
+/run/beamOn 1
+/gun/direction -0.000000 -0.030009 1.000000
+/run/beamOn 1
+/gun/direction 0.015004 -0.025989 1.000000
+/run/beamOn 1
+/gun/direction 0.025989 -0.015005 1.000000
+/run/beamOn 1
+/gun/direction 0.090244 0.000000 1.000000
+/run/beamOn 1
+/gun/direction 0.078153 0.045122 1.000000
+/run/beamOn 1
+/gun/direction 0.045122 0.078153 1.000000
+/run/beamOn 1
+/gun/direction 0.000000 0.090244 1.000000
+/run/beamOn 1
+/gun/direction -0.045122 0.078153 1.000000
+/run/beamOn 1
+/gun/direction -0.078153 0.045122 1.000000
+/run/beamOn 1
+/gun/direction -0.090244 0.000000 1.000000
+/run/beamOn 1
+/gun/direction -0.078153 -0.045122 1.000000
+/run/beamOn 1
+/gun/direction -0.045122 -0.078153 1.000000
+/run/beamOn 1
+/gun/direction -0.000000 -0.090244 1.000000
+/run/beamOn 1
+/gun/direction 0.045122 -0.078153 1.000000
+/run/beamOn 1
+/gun/direction 0.078153 -0.045122 1.000000
+/run/beamOn 1
+/gun/direction 0.151135 0.000000 1.000000
+/run/beamOn 1
+/gun/direction 0.130887 0.075568 1.000000
+/run/beamOn 1
+/gun/direction 0.075568 0.130887 1.000000
+/run/beamOn 1
+/gun/direction 0.000000 0.151135 1.000000
+/run/beamOn 1
+/gun/direction -0.075568 0.130887 1.000000
+/run/beamOn 1
+/gun/direction -0.130887 0.075568 1.000000
+/run/beamOn 1
+/gun/direction -0.151135 0.000000 1.000000
+/run/beamOn 1
+/gun/direction -0.130887 -0.075568 1.000000
+/run/beamOn 1
+/gun/direction -0.075568 -0.130887 1.000000
+/run/beamOn 1
+/gun/direction -0.000000 -0.151135 1.000000
+/run/beamOn 1
+/gun/direction 0.075567 -0.130887 1.000000
+/run/beamOn 1
+/gun/direction 0.130887 -0.075568 1.000000
+/run/beamOn 1
+/gun/direction 0.213142 0.000000 1.000000
+/run/beamOn 1
+/gun/direction 0.184587 0.106571 1.000000
+/run/beamOn 1
+/gun/direction 0.106571 0.184587 1.000000
+/run/beamOn 1
+/gun/direction 0.000000 0.213142 1.000000
+/run/beamOn 1
+/gun/direction -0.106571 0.184587 1.000000
+/run/beamOn 1
+/gun/direction -0.184587 0.106571 1.000000
+/run/beamOn 1
+/gun/direction -0.213142 0.000000 1.000000
+/run/beamOn 1
+/gun/direction -0.184587 -0.106571 1.000000
+/run/beamOn 1
+/gun/direction -0.106571 -0.184587 1.000000
+/run/beamOn 1
+/gun/direction -0.000000 -0.213142 1.000000
+/run/beamOn 1
+/gun/direction 0.106571 -0.184587 1.000000
+/run/beamOn 1
+/gun/direction 0.184587 -0.106571 1.000000
+/run/beamOn 1
+exit

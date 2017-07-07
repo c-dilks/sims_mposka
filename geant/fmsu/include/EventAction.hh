@@ -79,6 +79,8 @@ class EventAction : public G4UserEventAction
 		//Int_t maxR[];
 		//Int_t maxC[];
 		//Int_t maxZ[];
+                Float_t x_global;
+                Float_t y_global;
 		//
 
 		TH1D *PhotonWavelengthS;

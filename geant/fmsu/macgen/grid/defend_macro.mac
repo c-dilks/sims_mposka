@@ -1,0 +1,5 @@
+/gun/particle pi+
+/gun/direction 0 0 1
+/gun/energy 30 GeV
+/run/beamOn 100
+exit
