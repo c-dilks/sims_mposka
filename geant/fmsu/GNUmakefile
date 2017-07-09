@@ -35,6 +35,9 @@ CPPFLAGS += -I$(FMSSRC)
 EXTRALIBS := $(FMSSRC)/Fpdchan.so
 G4DEBUG = 1
 
+# turn on debugging symbols for valgrind
+# CPPFLAGS += -g
+
 #BS. NOT SURE HOW TO HAVE THE MAKEFILE COMPILE THE CLASS WITHOUT THIS. NEED TO FIX LATER
 CPPFLAGS += -I${SIMHOME}/geant/fmsu/myRootClass
 EXTRALIBS += ${SIMHOME}/geant/fmsu/myRootClass/libG4QT.so

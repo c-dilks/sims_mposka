@@ -166,6 +166,7 @@ class PostSim
 		//////End BS
 
 
+                TTree * sstr;
                 TH2F * shsh_edep[2][2]; // shower shape [0=large, 1=small] [0=horizontal, 1=vertical]
                 TH2F * shsh_ncer[2][2]; 
 
@@ -194,6 +195,19 @@ class PostSim
 		G4String QTMAP;
 		G4String QTMAP2PP;
 
+                
+                // for shower max algorithm
+                Int_t nstbTr,rowTr,colTr;
+                Float_t total_edep[2]; // [ls]
+                Float_t total_ncer[2];
+                Int_t rowmax[2];
+                Int_t colmax[2];
+                Float_t total_edepTr;
+                Float_t total_ncerTr;
+                Int_t lsvar,hvvar;
+                Float_t xcm,ycm,distx,disty;
+                Float_t a_edep,a_ncer;
+                Float_t frac_edep,frac_ncer;
 };
 
 #endif

@@ -86,7 +86,6 @@ PostSim::PostSim()
         TString shshN,shshT;
         for(int ls=0; ls<2; ls++) {
           for(int hv=0; hv<2; hv++) {
-
             shshN = Form("shshEdep%s%s",ls==kL?"L":"S",hv==kH?"H":"V");
             shshT = Form("%s Cells %s E_{dep} Shower Shape;%s",
               ls==kL?"Large":"Small",hv==kH?"Horizontal":"Vertical",hv==kH?"x_{c}":"y_{c}");
@@ -98,6 +97,23 @@ PostSim::PostSim()
             shsh_ncer[ls][hv] = new TH2F(shshN.Data(),shshT.Data(),100,-5,5,100,0,1);
           };
         };
+        
+        sstr = new TTree("sstr","sstr");
+        sstr->Branch("nstbTr",&nstbTr,"nstbTr/I");
+        sstr->Branch("rowTr",&rowTr,"rowTr/I");
+        sstr->Branch("colTr",&colTr,"colTr/I");
+        sstr->Branch("total_edepTr",&total_edepTr,"total_edepTr/F");
+        sstr->Branch("total_ncerTr",&total_ncerTr,"total_ncerTr/F");
+        sstr->Branch("lsvar",&lsvar,"lsvar/I");
+        sstr->Branch("hvvar",&hvvar,"hvvar/I");
+        sstr->Branch("xcm",&xcm,"xcm/F");
+        sstr->Branch("ycm",&ycm,"ycm/F");
+        sstr->Branch("distx",&distx,"distx/F");
+        sstr->Branch("disty",&disty,"disty/F");
+        sstr->Branch("x_global",&x_global,"x_global/F");
+        sstr->Branch("y_global",&y_global,"y_global/F");
+        sstr->Branch("frac_edep",&frac_edep,"frac_edep/F");
+        sstr->Branch("frac_ncer",&frac_ncer,"frac_ncer/F");
 }
 
 PostSim::~PostSim()
@@ -419,33 +435,34 @@ void PostSim::GetHT(int i)
 // fill shower shape histos
 void PostSim::FillShowerShape() {
 
-  printf("\n\n\n>>> aqui comienza FillShowerShape <<< \n\n");
+  Bool_t debugSS = true;
+  if(debugSS) printf("\n\n\n[ V V V V ] SHOWER SHAPE [ V V V V ] \n\n");
 
-  // trabaja
-  // using "sedep" and "sncer"... is this correct? do we need to use sedep1? or sedepM?
+  // trabaja -- using "sedep" and "sncer"... is this correct? do we need to use sedep1? or sedepM?
   TMatrix ** sedep = (TMatrix**) MatrixArray.At(1); 
   TMatrix ** sncer = (TMatrix**) MatrixArray.At(4);
 
 
-  for(int ns=0; ns<4; ns++) {
-    printf(">>> sedep %d @ %p dim=%dx%d\n",ns,(void*)sedep[ns],sedep[ns]->GetNrows(),sedep[ns]->GetNcols());
-    //sedep[ns-1]->Print();
-    printf(">>> sncer %d @ %p dim=%dx%d\n",ns,(void*)sncer[ns],sedep[ns]->GetNrows(),sedep[ns]->GetNcols());
-    //sncer[ns-1]->Print();
+  if(debugSS) {
+    for(int ns=0; ns<4; ns++) {
+      printf(">>> sedep %d @ %p dim=%dx%d\n",ns,(void*)sedep[ns],sedep[ns]->GetNrows(),sedep[ns]->GetNcols());
+      //sedep[ns-1]->Print();
+      printf(">>> sncer %d @ %p dim=%dx%d\n",ns,(void*)sncer[ns],sedep[ns]->GetNrows(),sedep[ns]->GetNcols());
+      //sncer[ns-1]->Print();
+    };
+    printf("HT: nstb_ht=%d row_ht=%d col_ht=%d\n",nstb_ht,row_ht,col_ht);
+    printf("x_global=%f y_global=%f\n",x_global,y_global);
   };
 
-  printf("HT: nstb_ht=%d row_ht=%d col_ht=%d\n",nstb_ht,row_ht,col_ht);
-  printf("x_global=%f y_global=%f\n",x_global,y_global);
+  for(int ls=0; ls<2; ls++) {
+    total_edep[ls] = 0;
+    total_ncer[ls] = 0;
+  };
+  rowmax[kL] = 34;
+  rowmax[kS] = 24;
+  colmax[kL] = 17;
+  colmax[kS] = 12;
 
-  Float_t total_edep[2] = {0,0}; // [ls]
-  Float_t total_ncer[2] = {0,0};
-  Int_t rowmax[2] = {34,24};
-  Int_t colmax[2] = {17,12};
-  Int_t lsvar;
-  Float_t xcm,ycm,distx,disty;
-
-  Float_t a_edep,a_ncer;
-  Float_t frac_edep,frac_ncer;
 
   // compute totals
   for(int ns=0; ns<4; ns++) {
@@ -468,33 +485,43 @@ void PostSim::FillShowerShape() {
           frac_edep = 0;
           frac_ncer = 0;
 
-          if(total_edep[lsvar]>0) frac_edep = (*(sedep[ns]))(rs,cs) / total_edep[lsvar];
-          if(total_ncer[lsvar]>0) frac_ncer = (*(sncer[ns]))(rs,cs) / total_ncer[lsvar];
+          total_edepTr = total_edep[lsvar];
+          total_ncerTr = total_ncer[lsvar];
+
+          if(total_edepTr>0) frac_edep = (*(sedep[ns]))(rs,cs) / total_edepTr;
+          if(total_ncerTr>0) frac_ncer = (*(sncer[ns]))(rs,cs) / total_ncerTr;
+
+          nstbTr = ns;
+          rowTr = rs;
+          colTr = cs;
 
           GetCellCenter(ns,rs,cs,xcm,ycm);
+
           distx = xcm - x_global;
           disty = ycm - y_global;
 
-          printf("ns=%d rs=%d cs=%d\n",ns,rs,cs);
+          if(debugSS) printf("ns=%d rs=%d cs=%d\n",ns,rs,cs);
           if(rs==row_ht) { 
-            printf("  rs=%d distx=%f frac_edep=%f\n",rs,distx,frac_edep);
-            if(frac_edep>0) shsh_edep[lsvar][kH]->Fill(distx,frac_edep);
-            if(frac_ncer>0) shsh_ncer[lsvar][kH]->Fill(distx,frac_ncer);
+            if(debugSS) printf("  rs=%d distx=%f frac_edep=%f\n",rs,distx,frac_edep);
+            hvvar = kH;
+            if(frac_edep>0) shsh_edep[lsvar][hvvar]->Fill(distx,frac_edep);
+            if(frac_ncer>0) shsh_ncer[lsvar][hvvar]->Fill(distx,frac_ncer);
+            sstr->Fill();
           };
 
           if(cs==col_ht) { 
-            printf("  cs=%d disty=%f frac_edep=%f\n",cs,disty,frac_edep);
-            if(frac_edep>0) shsh_edep[lsvar][kV]->Fill(disty,frac_edep);
-            if(frac_ncer>0) shsh_ncer[lsvar][kV]->Fill(disty,frac_ncer);
+            if(debugSS) printf("  cs=%d disty=%f frac_edep=%f\n",cs,disty,frac_edep);
+            hvvar = kV;
+            if(frac_edep>0) shsh_edep[lsvar][hvvar]->Fill(disty,frac_edep);
+            if(frac_ncer>0) shsh_ncer[lsvar][hvvar]->Fill(disty,frac_ncer);
+            sstr->Fill();
           };
         };
       };
     };
   }; // eo fill shower shape loop
 
-  printf(">>> FillShowerShape hecho\n");
-
-
+  if(debugSS) printf("\n\n\n[ ^ ^ ^ ^ ] SHOWER SHAPE [ ^ ^ ^ ^ ] \n\n");
   return;
 };
 

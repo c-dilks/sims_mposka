@@ -5,7 +5,7 @@
 /vis/viewer/set/viewpointThetaPhi 90 180 deg
 /vis/viewer/zoom 1.4
 /vis/scene/add/trajectories smooth
-/gps/position -33.16454545454545454544 32.470 -5.0 cm
+/gps/position -34.27900000000000000000 72.625 -5.0 cm
 /gps/particle gamma
 /gps/direction 0 0 1
 /gps/energy 30 GeV

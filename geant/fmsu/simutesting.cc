@@ -217,6 +217,7 @@ G4cout<<"G4UI_USE IS DEFINED"<<G4endl;
       (evact->pss).shsh_ncer[ls][hv]->Write();
     };
   };
+  (evact->pss).sstr->Write();
 
 //  evact->PhotonWavelengthS->Write();
 //  evact->PhotonWavelengthL->Write();

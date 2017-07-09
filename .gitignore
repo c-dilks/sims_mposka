@@ -3,5 +3,6 @@ geant/fmsu/outroot*/*
 geant/fmsu/log/*
 geant/fmsu/logfiles/*
 geant/fmsu/gFiles/*
+geant/fmsu/gFiles*/*
 analysis/*
 *.swp

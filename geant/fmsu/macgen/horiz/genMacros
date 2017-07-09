@@ -5,14 +5,14 @@ particle=gamma
 #particle=pi+
 
 
-nstb=3
-row=3
-col=8
-#nstb=1
-#row=4
-#col=5
+#nstb=3
+#row=3
+#col=8
+nstb=1
+row=4
+col=5
 
-ndiv=11
+ndiv=5
 #energy_lb=5
 #energy_ub=50
 #energy_step=5
@@ -81,6 +81,7 @@ echo "/vis/scene/add/trajectories smooth" >> $def
 #echo "/gps/position $x $y $z cm" >> $def
 echo "/gps/particle $particle" >> $defend
 echo "/gps/direction 0 0 1" >> $defend
+#echo "/gps/direction 0.1736 0 0.9848" >> $defend # INCIDENT ANGLE (sin(a),0,cos(a); a=10deg)
 while read energy; do
   echo "/gps/energy $energy GeV" >> $defend
   echo "/run/beamOn 10" >> $defend
