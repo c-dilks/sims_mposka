@@ -7,7 +7,7 @@
 /vis/scene/add/trajectories smooth
 /gps/position -32.06892156862745098039 72.625 0.0 cm
 /gps/particle gamma
-/gps/direction 0.1736 0 0.9848
+/gps/direction 0.4998 0 0.8662
 /gps/energy 30 GeV
 /run/beamOn 4
 exit

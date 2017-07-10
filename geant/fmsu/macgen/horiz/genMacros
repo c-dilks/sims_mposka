@@ -81,7 +81,8 @@ echo "/vis/scene/add/trajectories smooth" >> $def
 #echo "/gps/position $x $y $z cm" >> $def
 echo "/gps/particle $particle" >> $defend
 #echo "/gps/direction 0 0 1" >> $defend
-echo "/gps/direction 0.1736 0 0.9848" >> $defend # INCIDENT ANGLE (sin(a),0,cos(a); a=10deg)
+#echo "/gps/direction 0.1736 0 0.9848" >> $defend # INCIDENT ANGLE (sin(a),0,cos(a); a=10deg)
+echo "/gps/direction 0.4998 0 0.8662" >> $defend # INCIDENT ANGLE (sin(a),0,cos(a); a=30deg)
 while read energy; do
   echo "/gps/energy $energy GeV" >> $defend
   echo "/run/beamOn 4" >> $defend

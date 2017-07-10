@@ -1,0 +1,13 @@
+/control/verbose 2
+/run/verbose 2
+/vis/disable
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 90 180 deg
+/vis/viewer/zoom 1.4
+/vis/scene/add/trajectories smooth
+/gps/position 32.23166666666666666666 72.625 0.0 cm
+/gps/particle gamma
+/gps/direction 0.342020 0.000000 0.939690
+/gps/energy 30 GeV
+/run/beamOn 10
+exit
