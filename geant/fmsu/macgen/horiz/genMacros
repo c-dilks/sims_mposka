@@ -12,7 +12,7 @@ nstb=1
 row=4
 col=5
 
-ndiv=5
+ndiv=51
 #energy_lb=5
 #energy_ub=50
 #energy_step=5
@@ -33,7 +33,7 @@ fi
 
 lspace=5.81
 sspace=3.82
-z=-5.0
+z=0.0
 
 if [ $nstb -eq 1 ]; then
   x=$(echo "-($col+0.5)*$lspace" | bc -l)
@@ -80,11 +80,11 @@ echo "/vis/viewer/zoom 1.4" >> $def
 echo "/vis/scene/add/trajectories smooth" >> $def
 #echo "/gps/position $x $y $z cm" >> $def
 echo "/gps/particle $particle" >> $defend
-echo "/gps/direction 0 0 1" >> $defend
-#echo "/gps/direction 0.1736 0 0.9848" >> $defend # INCIDENT ANGLE (sin(a),0,cos(a); a=10deg)
+#echo "/gps/direction 0 0 1" >> $defend
+echo "/gps/direction 0.1736 0 0.9848" >> $defend # INCIDENT ANGLE (sin(a),0,cos(a); a=10deg)
 while read energy; do
   echo "/gps/energy $energy GeV" >> $defend
-  echo "/run/beamOn 10" >> $defend
+  echo "/run/beamOn 4" >> $defend
 done < enseq
 rm enseq
 echo "exit" >> $defend

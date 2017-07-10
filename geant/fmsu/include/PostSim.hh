@@ -171,6 +171,8 @@ class PostSim
                 TH2F * shsh_ncer[2][2]; 
 
 
+                Float_t showerMaxE;
+                Float_t showerMaxP;
 
 	private:
 		int arr_size;
@@ -197,6 +199,7 @@ class PostSim
 
                 
                 // for shower max algorithm
+                Int_t evtIdx;
                 Int_t nstbTr,rowTr,colTr;
                 Float_t total_edep[2]; // [ls]
                 Float_t total_ncer[2];

@@ -767,6 +767,9 @@ void EventAction::EndOfEventAction(const G4Event* evt)
 		Double_t binMaxP = ShowerMaxHistP->GetMaximumBin();
 		ShowerMaxHistP->Fit("gaus","","",binMaxP-RMSP-0.5,binMaxP+RMSP-.5);
 		EventAction::ShowerMaxP = ShowerMaxHistP->GetFunction("gaus")->GetParameter(1);
+
+                pss.showerMaxE = EventAction::ShowerMaxE;
+                pss.showerMaxP = EventAction::ShowerMaxP;
 		}
 //
 	/*Matt

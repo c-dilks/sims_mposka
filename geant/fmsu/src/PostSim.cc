@@ -99,6 +99,7 @@ PostSim::PostSim()
         };
         
         sstr = new TTree("sstr","sstr");
+        sstr->Branch("evtIdx",&evtIdx,"evtIdx/I");
         sstr->Branch("nstbTr",&nstbTr,"nstbTr/I");
         sstr->Branch("rowTr",&rowTr,"rowTr/I");
         sstr->Branch("colTr",&colTr,"colTr/I");
@@ -114,6 +115,10 @@ PostSim::PostSim()
         sstr->Branch("y_global",&y_global,"y_global/F");
         sstr->Branch("frac_edep",&frac_edep,"frac_edep/F");
         sstr->Branch("frac_ncer",&frac_ncer,"frac_ncer/F");
+        sstr->Branch("showerMaxE",&showerMaxE,"showerMaxE/F");
+        sstr->Branch("showerMaxP",&showerMaxP,"showerMaxP/F");
+
+        evtIdx=0;
 }
 
 PostSim::~PostSim()
@@ -476,6 +481,7 @@ void PostSim::FillShowerShape() {
   };
 
   // fill shower shape (for large XOR small cells, depening on which has HT)
+  Bool_t sstrFilled = false;
   for(int ns=0; ns<4; ns++) {
     lsvar = ns<2 ? kL:kS;
     if(lsvar == ((nstb_ht-1)<2 ? kL:kS)) {
@@ -507,6 +513,7 @@ void PostSim::FillShowerShape() {
             if(frac_edep>0) shsh_edep[lsvar][hvvar]->Fill(distx,frac_edep);
             if(frac_ncer>0) shsh_ncer[lsvar][hvvar]->Fill(distx,frac_ncer);
             sstr->Fill();
+            sstrFilled = true;
           };
 
           if(cs==col_ht) { 
@@ -515,11 +522,14 @@ void PostSim::FillShowerShape() {
             if(frac_edep>0) shsh_edep[lsvar][hvvar]->Fill(disty,frac_edep);
             if(frac_ncer>0) shsh_ncer[lsvar][hvvar]->Fill(disty,frac_ncer);
             sstr->Fill();
+            sstrFilled = true;
           };
         };
       };
     };
   }; // eo fill shower shape loop
+
+  if(sstrFilled) evtIdx++;
 
   if(debugSS) printf("\n\n\n[ ^ ^ ^ ^ ] SHOWER SHAPE [ ^ ^ ^ ^ ] \n\n");
   return;
