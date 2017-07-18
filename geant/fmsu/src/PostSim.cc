@@ -412,7 +412,7 @@ void PostSim::Digitise(Int_t nn, int k)
 // the highest tower corrdinates
 void PostSim::GetHT(int i)
 {
-	TMatrix ** sedep = (TMatrix**) MatrixArray.At(i*6+1);
+	TMatrix ** sedep = (TMatrix**) MatrixArray.At(i*numberMatrices+1);
 	max_edep=0;
 	nstb_ht=row_ht=col_ht=0;
 

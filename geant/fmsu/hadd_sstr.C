@@ -1,7 +1,7 @@
 // combines shower shape trees together, adding branches which include information
 // about the initial thrown particle
 
-void hadd_sstr(TString dirname = "gFiles_tmp") {
+void hadd_sstr(TString dirname = "gFiles") {
   Int_t evtIdx;
   Int_t nstbTr,rowTr,colTr;
   Float_t total_edepTr;
