@@ -8,15 +8,13 @@ particle=gamma
 # number of positions and events
 #############################
 ndivhoriz=11
-#nevents=10
-nevents=3
+nevents=10
 
 # polar angle bins
 #############################
 theta_lb=0.0
-#theta_ub=30.0
-theta_ub=0.0
-theta_step=2.0
+theta_ub=30.0
+theta_step=5.0
 
 # azimuthal angle bins
 #############################
@@ -33,12 +31,12 @@ energy_step=5
 
 # select cell (NSTB RANGE 1-4 HERE)
 #############################
-nstb=4
-row=3
-col=8
-#nstb=1
-#row=4
-#col=5
+#nstb=4
+#row=3
+#col=8
+nstb=1
+row=4
+col=5
 
 
 #############################
@@ -50,7 +48,7 @@ col=8
 # determine cell center ($xcent,$ycent,$zcent)
 lspace=5.81
 sspace=3.82
-zcent=0.0
+zcent=-30.6 # according to branden this is front face of FMS
 
 if [ $nstb -eq 1 ]; then
   xcent=$(echo "-($col+0.5)*$lspace" | bc -l)
