@@ -3,15 +3,15 @@ const Int_t NN = 10;
 const Int_t NPARAM = 6;
 enum paramEnum {kL,kW,kTheta,kHscale,kVscale,kS};
 
-Double_t radlength = 2.5;
+Double_t radlength = 6.5;
 const Float_t DD = 3.8;
 
 // theta=0
 const Float_t LLdefault = 0.257; // 0.2
-const Float_t WWdefault = 5 * radlength; // 2.31
+const Float_t WWdefault = 4 * radlength; // 2.31
 const Float_t thetaDefault = 20 * TMath::Pi() / 180.0;
 //Float_t ssDefault = 5; // +++
-Float_t ssDefault = 40; // +++
+Float_t ssDefault = 85; // +++
 
 //const Float_t LLdefault = 0.2;
 //const Float_t WWdefault = 1.8;
@@ -26,7 +26,7 @@ const Float_t kVscaleDefault = 1.12;
 
 Double_t plotBound = 20;
 
-void PlotSSmodel() {
+void PlotSSmodelOLD() {
 
 
   /*
@@ -112,15 +112,15 @@ void PlotSSmodel() {
     fn[t]->SetParameter(kHscale,kHscaleDefault);
     fn[t]->SetParameter(kVscale,kVscaleDefault);
     //fn[t]->SetParLimits(kHscale, 0.1, 5.0); // +++
-    fn[t]->SetParLimits(kHscale, -2.0, -0.5); // +++
+    fn[t]->SetParLimits(kHscale, -5.0, -1.0); // +++
     fn[t]->SetParLimits(kVscale, 0.8, 1.2);
-    //fn[t]->FixParameter(kHscale,kHscaleDefault);
+    fn[t]->FixParameter(kHscale,kHscaleDefault);
     //fn[t]->FixParameter(kVscale,kVscaleDefault);
 
 
     fn[t]->SetParameter(kS,ssDefault);
     //fn[t]->FixParameter(kS,ssDefault);
-    fn[t]->SetParLimits(kS,ssDefault-10,ssDefault+10);
+    fn[t]->SetParLimits(kS,ssDefault-5,ssDefault+5);
 
     for(int pp=0; pp<NPARAM; pp++) fn[t]->SetParName(pp,paramN[pp].Data());
   };
@@ -160,6 +160,8 @@ void PlotSSmodel() {
 
         inplot[t]->GetYaxis()->SetRangeUser(0,1);
 
+        inplot[t]->SetLineWidth(3);
+        inplot[t]->SetLineColor(kBlack);
         inplot[t]->Draw();
         fnX[t]->Draw("SAME");
       };
