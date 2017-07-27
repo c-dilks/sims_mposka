@@ -48,7 +48,10 @@ CellParameterisation::CellParameterisation(
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 CellParameterisation::~CellParameterisation()
-{}
+{
+  //if(cellgeo) delete cellgeo; // CJD (cellgeo defined in ../include/CellGeo.hh as extern CellGeo...)
+  
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

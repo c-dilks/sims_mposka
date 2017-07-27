@@ -61,6 +61,7 @@ void CellGeo::SetGains(G4String txtString, G4String gainString, G4String corrStr
   G4String fmstxt = fu->GetEnv("FMSTXT");
   G4String fmsgain = fu->GetEnv("FMSGAIN");
   G4String fmscorr = fu->GetEnv("FMSCORR");
+  if(fu) delete fu; // cjd
 
   if(txtString!="") { fmstxt = txtString; std::cout<<"USING USER TXT"<<std::endl;}
   if(gainString!="") fmsgain = gainString;

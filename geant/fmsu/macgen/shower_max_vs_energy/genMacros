@@ -1,0 +1,149 @@
+#!/bin/bash
+# generates macros along the horizontal direction in specified cell
+
+particle=gamma
+#particle=pi+
+
+
+# number of positions and events
+#############################
+ndivhoriz=1
+nevents=10
+
+# polar angle bins
+#############################
+theta_lb=0.0
+theta_ub=0.0
+theta_step=5.0
+
+# azimuthal angle bins
+#############################
+phi_lb=0.0
+phi_ub=0.0
+phi_step=10.0
+
+# energy bins
+#############################
+energy_lb=10
+energy_ub=100
+energy_step=1
+
+
+# select cell (NSTB RANGE 1-4 HERE)
+#############################
+#nstb=4
+#row=3
+#col=8
+nstb=1
+row=4
+col=5
+
+
+#############################
+#############################
+
+
+
+
+# determine cell center ($xcent,$ycent,$zcent)
+lspace=5.81
+sspace=3.82
+zcent=-30.6 # according to branden this is front face of FMS
+
+if [ $nstb -eq 1 ]; then
+  xcent=$(echo "-($col+0.5)*$lspace" | bc -l)
+  ycent=$(echo "(16.5-$row)*$lspace" | bc -l)
+  spc=$lspace
+elif [ $nstb -eq 2 ]; then
+  xcent=$(echo "($col+0.5)*$lspace" | bc -l)
+  ycent=$(echo "(16.5-$row)*$lspace" | bc -l)
+  spc=$lspace
+elif [ $nstb -eq 3 ]; then
+  xcent=$(echo "-($col+0.5)*$sspace" | bc -l)
+  ycent=$(echo "(11.5-$row)*$sspace" | bc -l)
+  spc=$sspace
+elif [ $nstb -eq 4 ]; then
+  xcent=$(echo "($col+0.5)*$sspace" | bc -l)
+  ycent=$(echo "(11.5-$row)*$sspace" | bc -l)
+  spc=$sspace
+else
+  echo "error: bad nstb"
+  exit
+fi
+
+echo "nstb=$nstb row=$row col=$col xcent=$xcent ycent=$ycent"
+
+
+# math for varying x and y positions
+let mm=$ndivhoriz%2
+if [ $mm -ne 1 ]; then
+  echo "error: use odd number of divisions (ndivhoriz)"
+  exit
+fi
+
+
+
+halfdiv=$(echo "($ndivhoriz-1)/2" | bc)
+rm macro*.mac
+echo "removed old macros"
+
+def_macro="def_macro.mac" # default macro header
+> $def_macro
+echo "/control/verbose 2" >> $def_macro
+echo "/run/verbose 2" >> $def_macro
+echo "/vis/disable" >> $def_macro
+echo "/vis/drawVolume" >> $def_macro
+echo "/vis/viewer/set/viewpointThetaPhi 90 180 deg" >> $def_macro
+echo "/vis/viewer/zoom 1.4" >> $def_macro
+echo "/vis/scene/add/trajectories smooth" >> $def_macro
+
+
+for energy in `seq $energy_lb $energy_step $energy_ub`; do 
+  for theta in `seq $theta_lb $theta_step $theta_ub`; do 
+    for phi in `seq $phi_lb $phi_step $phi_ub`; do 
+      # direction vector
+      degtorad=$(echo "3.14159265/180.0" | bc -l)
+      xdir=$(echo "scale=5;s($theta*$degtorad)*c($phi*$degtorad)" | bc -l | awk '{printf "%f", $0}')
+      ydir=$(echo "scale=5;s($theta*$degtorad)*s($phi*$degtorad)" | bc -l | awk '{printf "%f", $0}')
+      zdir=$(echo "scale=5;c($theta*$degtorad)" | bc -l | awk '{printf "%f", $0}')
+
+      echo "energy=$energy theta=$theta phi=$phi   xdir=$xdir ydir=$ydir zdir=$zdir"
+
+      mac_iter=1
+      sub_iter=0
+
+
+      divspc=$(echo "$spc/$ndivhoriz" | bc -l)
+      while [ $sub_iter -le $halfdiv ]; do
+
+        # loop over "left" and "right" positions for xshift
+        for lr in {0..1}; do
+          mac_name="macro_e${energy}_th${theta}_ph${phi}_pos${mac_iter}.mac"
+
+          if [ $lr -eq 0 ]; then
+            xshift=$(echo "$xcent-$divspc*$sub_iter" | bc -l)
+          else
+            if [ $sub_iter -eq 0 ]; then continue; fi
+            xshift=$(echo "$xcent+$divspc*$sub_iter" | bc -l)
+          fi
+
+          cat $def_macro >> $mac_name
+          echo "/gps/position $xshift $ycent $zcent cm" >> $mac_name
+          echo "/gps/particle $particle" >> $mac_name
+          echo "/gps/direction $xdir $ydir $zdir" >> $mac_name
+          echo "/gps/energy $energy GeV" >> $mac_name
+          echo "/run/beamOn $nevents" >> $mac_name
+          echo "exit" >> $mac_name
+
+          let mac_iter++
+        done
+        let sub_iter++
+      done
+    done
+  done
+done
+
+rm $def_macro
+
+
+

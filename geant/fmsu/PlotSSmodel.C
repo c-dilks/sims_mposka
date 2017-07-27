@@ -1,3 +1,5 @@
+// PLOTS SHOWER SHAPE MODEL
+
 const Int_t NN = 10;
 
 const Int_t NPARAM = 6;

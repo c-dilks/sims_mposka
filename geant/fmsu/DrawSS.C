@@ -1,5 +1,11 @@
+// draws shower shapes from simulation results;
+// execute `hadd_sstr.C` to produce the required gFiles/all.root input file
+//
+// output file is called ssplots.root
+
+
 void DrawSS(Float_t energy0 = 60,
-            Int_t lsvar0 = 1,
+            Int_t lsvar0 = 0,
             Int_t hvvar0 = 0,
             Float_t frac_edep_cut = 0.001
            ) {

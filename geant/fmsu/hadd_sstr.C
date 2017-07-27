@@ -1,5 +1,7 @@
 // combines shower shape trees together, adding branches which include information
 // about the initial thrown particle
+//
+// output file is gFiles/all.root
 
 void hadd_sstr(TString dirname = "gFiles") {
   Int_t evtIdx;

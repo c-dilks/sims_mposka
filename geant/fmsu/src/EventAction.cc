@@ -912,6 +912,22 @@ void EventAction::EndOfEventAction(const G4Event* evt)
 
 	//Replace this change into main program
 	pFile->cd();
+
+        
+        // CJD -- leak fixing
+        /*
+        if(DamageFunc) delete DamageFunc;
+        if(EnergyShapeFile) delete EnergyShapeFile;
+        if(DamageFuncUpdated) delete DamageFuncUpdated;
+	for(Int_t n=0; n<4; n++) {
+		for(Int_t r=0; r<34; r++) {
+			for(Int_t c=0; c<17; c++) {
+                          if(hmE[n][r][c]) delete hmE[n][r][c];
+                          if(hmP[n][r][c]) delete hmP[n][r][c];
+                        };
+                };
+        };
+        */
 } 
 
 
